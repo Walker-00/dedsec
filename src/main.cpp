@@ -210,12 +210,12 @@ void boot_screen() {
     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
     tft.setTextSize(FM);
     tft.drawPixel(0, 0, bruceConfig.bgColor);
-    tft.drawCentreString("Bruce", tftWidth / 2, 10, 1);
+    tft.drawCentreString("DedSec", tftWidth / 2, 10, 1);
     tft.setTextSize(FP);
     tft.drawCentreString(BRUCE_VERSION, tftWidth / 2, 25, 1);
     tft.setTextSize(FM);
     tft.drawCentreString(
-        "PREDATORY FIRMWARE", tftWidth / 2, tftHeight + 2, 1
+        "Dead Man Hacking", tftWidth / 2, tftHeight + 2, 1
     ); // will draw outside the screen on non touch devices
 }
 
@@ -271,33 +271,33 @@ void boot_screen_anim() {
             }
             drawn = true;
         }
-#if !defined(LITE_VERSION)
-        if (!boot_img && (millis() - i > 2200) && (millis() - i) < 2700)
-            tft.drawRect(2 * tftWidth / 3, tftHeight / 2, 2, 2, bruceConfig.priColor);
-        if (!boot_img && (millis() - i > 2700) && (millis() - i) < 2900)
-            tft.fillRect(0, 45, tftWidth, tftHeight - 45, bruceConfig.bgColor);
-        if (!boot_img && (millis() - i > 2900) && (millis() - i) < 3400)
-            tft.drawXBitmap(
-                2 * tftWidth / 3 - 30,
-                5 + tftHeight / 2,
-                bruce_small_bits,
-                bruce_small_width,
-                bruce_small_height,
-                bruceConfig.bgColor,
-                bruceConfig.priColor
-            );
-        if (!boot_img && (millis() - i > 3400) && (millis() - i) < 3600) tft.fillScreen(bruceConfig.bgColor);
-        if (!boot_img && (millis() - i > 3600))
-            tft.drawXBitmap(
-                (tftWidth - 238) / 2,
-                (tftHeight - 133) / 2,
-                bits,
-                bits_width,
-                bits_height,
-                bruceConfig.bgColor,
-                bruceConfig.priColor
-            );
-#endif
+// #if !defined(LITE_VERSION)
+//         if (!boot_img && (millis() - i > 2200) && (millis() - i) < 2700)
+//             tft.drawRect(2 * tftWidth / 3, tftHeight / 2, 2, 2, bruceConfig.priColor);
+//         if (!boot_img && (millis() - i > 2700) && (millis() - i) < 2900)
+//             tft.fillRect(0, 45, tftWidth, tftHeight - 45, bruceConfig.bgColor);
+//         if (!boot_img && (millis() - i > 2900) && (millis() - i) < 3400)
+//             tft.drawXBitmap(
+//                 2 * tftWidth / 3 - 30,
+//                 5 + tftHeight / 2,
+//                 bruce_small_bits,
+//                 bruce_small_width,
+//                 bruce_small_height,
+//                 bruceConfig.bgColor,
+//                 bruceConfig.priColor
+//             );
+//         if (!boot_img && (millis() - i > 3400) && (millis() - i) < 3600) tft.fillScreen(bruceConfig.bgColor);
+//         if (!boot_img && (millis() - i > 3600))
+//             tft.drawXBitmap(
+//                 (tftWidth - 238) / 2,
+//                 (tftHeight - 133) / 2,
+//                 bits,
+//                 bits_width,
+//                 bits_height,
+//                 bruceConfig.bgColor,
+//                 bruceConfig.priColor
+//             );
+// #endif
         if (check(AnyKeyPress)) // If any key or M5 key is pressed, it'll jump the boot screen
         {
             tft.fillScreen(bruceConfig.bgColor);

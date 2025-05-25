@@ -1,0 +1,1118 @@
+.
+├── boards
+│   ├── _boards_json
+│   │   ├── CYD-2432S028.json
+│   │   ├── ESP-General.json
+│   │   ├── lilygo-t-deck.json
+│   │   ├── lilygo-t-display-s3.json
+│   │   ├── lilygo-t-display-s3-pro.json
+│   │   ├── lilygo-t-display-ttgo.json
+│   │   ├── lilygo-t-embed-cc1101.json
+│   │   ├── lilygo-t-embed.json
+│   │   ├── lilygo-t-watch-s3.json
+│   │   ├── m5stack-cardputer.json
+│   │   ├── m5stack-core2.json
+│   │   ├── m5stack-core.json
+│   │   ├── m5stack-cores3.json
+│   │   ├── m5stack-cplus1_1.json
+│   │   ├── m5stack-cplus2.json
+│   │   ├── _New-Device-Model.json
+│   │   └── smoochiee-board.json
+│   ├── CYD-2432S028
+│   │   ├── CYD-2432S028.ini
+│   │   ├── interface.cpp
+│   │   └── pins_arduino.h
+│   ├── ESP-General
+│   │   ├── ESP-General.ini
+│   │   ├── interface.cpp
+│   │   └── pins_arduino.h
+│   ├── lilygo-t-deck
+│   │   ├── interface.cpp
+│   │   ├── lilygo-t-deck.ini
+│   │   └── pins_arduino.h
+│   ├── lilygo-t-display-s3
+│   │   ├── connections.md
+│   │   ├── interface.cpp
+│   │   ├── lilygo-t-display-s3.ini
+│   │   └── pins_arduino.h
+│   ├── lilygo-t-display-s3-pro
+│   │   ├── interface.cpp
+│   │   ├── pins_arduino.h
+│   │   └── platformio.ini
+│   ├── lilygo-t-display-ttgo
+│   │   ├── connections.md
+│   │   ├── interface.cpp
+│   │   ├── lilygo-t-display-s3.ini
+│   │   └── pins_arduino.h
+│   ├── lilygo-t-embed-cc1101
+│   │   ├── interface.cpp
+│   │   ├── lilygo-t-embed-cc1101.ini
+│   │   ├── lilygo-t-embed.ini
+│   │   └── pins_arduino.h
+│   ├── lilygo-t-watch-s3
+│   │   ├── interface.cpp
+│   │   ├── lilygo-t-watch-s3.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-cardputer
+│   │   ├── interface.cpp
+│   │   ├── m5stack-cardputer.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-core
+│   │   ├── interface.cpp
+│   │   ├── m5stack-core.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-core2
+│   │   ├── interface.cpp
+│   │   ├── m5stack-core2.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-cores3
+│   │   ├── interface.cpp
+│   │   ├── m5stack-cores3.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-cplus1_1
+│   │   ├── interface.cpp
+│   │   ├── m5stack-cplus1_1.ini
+│   │   └── pins_arduino.h
+│   ├── m5stack-cplus2
+│   │   ├── interface.cpp
+│   │   ├── m5stack-cplus2.ini
+│   │   └── pins_arduino.h
+│   ├── _New-Device-Model
+│   │   ├── interface.cpp
+│   │   ├── _New-Device-Model.ini
+│   │   └── pins_arduino.h
+│   ├── phantom
+│   │   ├── interface.cpp
+│   │   ├── phantom.ini
+│   │   └── pins_arduino.h
+│   ├── pinouts
+│   │   ├── pins_arduino.h
+│   │   └── variant.cpp
+│   ├── README.md
+│   └── smoochiee-board
+│       ├── interface.cpp
+│       ├── pins_arduino.h
+│       └── smoochiee-board.ini
+├── build.py
+├── custom_16Mb.csv
+├── custom_4Mb.csv
+├── custom_4Mb_full.csv
+├── custom_8Mb.csv
+├── embedded_resources
+│   └── web_interface
+│       ├── index.css
+│       ├── index.html
+│       ├── index.js
+│       ├── logout.html
+│       └── not_found.html
+├── include
+│   ├── globals.h
+│   ├── interface.h
+│   ├── MenuItemInterface.h
+│   ├── precompiler_flags.h
+│   ├── README
+│   └── VectorDisplay.h
+├── LAYOUT.md
+├── lib
+│   ├── Bad_Usb_Lib
+│   │   ├── Bad_Usb_Lib.h
+│   │   ├── BleKeyboard.cpp
+│   │   ├── BleKeyboard.h
+│   │   ├── CH9329_Keyboard.cpp
+│   │   ├── CH9329_Keyboard.h
+│   │   ├── KeyboardLayout_da_DK.cpp
+│   │   ├── KeyboardLayout_de_DE.cpp
+│   │   ├── KeyboardLayout_en_UK.cpp
+│   │   ├── KeyboardLayout_en_US.cpp
+│   │   ├── KeyboardLayout_es_ES.cpp
+│   │   ├── KeyboardLayout_fr_FR.cpp
+│   │   ├── KeyboardLayout.h
+│   │   ├── KeyboardLayout_hu_HU.cpp
+│   │   ├── KeyboardLayout_it_IT.cpp
+│   │   ├── KeyboardLayout_pt_PT-BR.cpp
+│   │   ├── KeyboardLayout_pt_PT.cpp
+│   │   ├── KeyboardLayout_si_SI.cpp
+│   │   ├── KeyboardLayout_sv_SE.cpp
+│   │   ├── KeyboardLayout_tr_TR.cpp
+│   │   ├── keys.h
+│   │   ├── USBHID.cpp
+│   │   ├── USBHID.h
+│   │   ├── USBHIDKeyboard.cpp
+│   │   ├── USBHIDKeyboard.h
+│   │   ├── USBHIDMouse.cpp
+│   │   └── USBHIDMouse.h
+│   ├── CYD-touch
+│   │   ├── CYD28_TouchscreenC.cpp
+│   │   ├── CYD28_TouchscreenC.h
+│   │   ├── CYD28_TouchscreenR.cpp
+│   │   └── CYD28_TouchscreenR.h
+│   ├── HAL
+│   │   ├── io_expander
+│   │   │   ├── Adafruit_AW9523.cpp
+│   │   │   ├── Adafruit_AW9523.h
+│   │   │   └── io_expander.h
+│   │   ├── library.json
+│   │   ├── sd_card
+│   │   │   ├── SD.cpp
+│   │   │   └── SD_MMC.cpp
+│   │   ├── sd_defines.h
+│   │   └── SD.h
+│   ├── README
+│   ├── RTC
+│   │   ├── cplus_RTC.cpp
+│   │   └── cplus_RTC.h
+│   ├── TFT_eSPI
+│   │   ├── CMakeLists.txt
+│   │   ├── Extensions
+│   │   │   ├── Button.cpp
+│   │   │   ├── Button.h
+│   │   │   ├── Smooth_font.cpp
+│   │   │   ├── Smooth_font.h
+│   │   │   ├── Sprite.cpp
+│   │   │   ├── Sprite.h
+│   │   │   ├── Touch.cpp
+│   │   │   └── Touch.h
+│   │   ├── Fonts
+│   │   │   ├── Custom
+│   │   │   │   ├── Orbitron_Light_24.h
+│   │   │   │   ├── Orbitron_Light_32.h
+│   │   │   │   ├── Roboto_Thin_24.h
+│   │   │   │   ├── Satisfy_24.h
+│   │   │   │   └── Yellowtail_32.h
+│   │   │   ├── Font16.c
+│   │   │   ├── Font16.h
+│   │   │   ├── Font32rle.c
+│   │   │   ├── Font32rle.h
+│   │   │   ├── Font64rle.c
+│   │   │   ├── Font64rle.h
+│   │   │   ├── Font72rle.c
+│   │   │   ├── Font72rle.h
+│   │   │   ├── Font72x53rle.c
+│   │   │   ├── Font72x53rle.h
+│   │   │   ├── Font7srle.c
+│   │   │   ├── Font7srle.h
+│   │   │   ├── GFXFF
+│   │   │   │   ├── FreeMono12pt7b.h
+│   │   │   │   ├── FreeMono18pt7b.h
+│   │   │   │   ├── FreeMono24pt7b.h
+│   │   │   │   ├── FreeMono9pt7b.h
+│   │   │   │   ├── FreeMonoBold12pt7b.h
+│   │   │   │   ├── FreeMonoBold18pt7b.h
+│   │   │   │   ├── FreeMonoBold24pt7b.h
+│   │   │   │   ├── FreeMonoBold9pt7b.h
+│   │   │   │   ├── FreeMonoBoldOblique12pt7b.h
+│   │   │   │   ├── FreeMonoBoldOblique18pt7b.h
+│   │   │   │   ├── FreeMonoBoldOblique24pt7b.h
+│   │   │   │   ├── FreeMonoBoldOblique9pt7b.h
+│   │   │   │   ├── FreeMonoOblique12pt7b.h
+│   │   │   │   ├── FreeMonoOblique18pt7b.h
+│   │   │   │   ├── FreeMonoOblique24pt7b.h
+│   │   │   │   ├── FreeMonoOblique9pt7b.h
+│   │   │   │   ├── FreeSans12pt7b.h
+│   │   │   │   ├── FreeSans18pt7b.h
+│   │   │   │   ├── FreeSans24pt7b.h
+│   │   │   │   ├── FreeSans9pt7b.h
+│   │   │   │   ├── FreeSansBold12pt7b.h
+│   │   │   │   ├── FreeSansBold18pt7b.h
+│   │   │   │   ├── FreeSansBold24pt7b.h
+│   │   │   │   ├── FreeSansBold9pt7b.h
+│   │   │   │   ├── FreeSansBoldOblique12pt7b.h
+│   │   │   │   ├── FreeSansBoldOblique18pt7b.h
+│   │   │   │   ├── FreeSansBoldOblique24pt7b.h
+│   │   │   │   ├── FreeSansBoldOblique9pt7b.h
+│   │   │   │   ├── FreeSansOblique12pt7b.h
+│   │   │   │   ├── FreeSansOblique18pt7b.h
+│   │   │   │   ├── FreeSansOblique24pt7b.h
+│   │   │   │   ├── FreeSansOblique9pt7b.h
+│   │   │   │   ├── FreeSerif12pt7b.h
+│   │   │   │   ├── FreeSerif18pt7b.h
+│   │   │   │   ├── FreeSerif24pt7b.h
+│   │   │   │   ├── FreeSerif9pt7b.h
+│   │   │   │   ├── FreeSerifBold12pt7b.h
+│   │   │   │   ├── FreeSerifBold18pt7b.h
+│   │   │   │   ├── FreeSerifBold24pt7b.h
+│   │   │   │   ├── FreeSerifBold9pt7b.h
+│   │   │   │   ├── FreeSerifBoldItalic12pt7b.h
+│   │   │   │   ├── FreeSerifBoldItalic18pt7b.h
+│   │   │   │   ├── FreeSerifBoldItalic24pt7b.h
+│   │   │   │   ├── FreeSerifBoldItalic9pt7b.h
+│   │   │   │   ├── FreeSerifItalic12pt7b.h
+│   │   │   │   ├── FreeSerifItalic18pt7b.h
+│   │   │   │   ├── FreeSerifItalic24pt7b.h
+│   │   │   │   ├── FreeSerifItalic9pt7b.h
+│   │   │   │   ├── gfxfont.h
+│   │   │   │   ├── license.txt
+│   │   │   │   ├── print.txt
+│   │   │   │   └── TomThumb.h
+│   │   │   └── glcdfont.c
+│   │   ├── Kconfig
+│   │   ├── keywords.txt
+│   │   ├── library.json
+│   │   ├── library.properties
+│   │   ├── license.txt
+│   │   ├── Processors
+│   │   │   ├── pio_16bit_parallel.pio.h
+│   │   │   ├── pio_8bit_parallel_18bpp.pio.h
+│   │   │   ├── pio_8bit_parallel.pio.h
+│   │   │   ├── pio_SPI_18bit.pio.h
+│   │   │   ├── pio_SPI.pio.h
+│   │   │   ├── TFT_eSPI_ESP32.c
+│   │   │   ├── TFT_eSPI_ESP32_C3.c
+│   │   │   ├── TFT_eSPI_ESP32_C3.h
+│   │   │   ├── TFT_eSPI_ESP32.h
+│   │   │   ├── TFT_eSPI_ESP32_S3.c
+│   │   │   ├── TFT_eSPI_ESP32_S3.h
+│   │   │   ├── TFT_eSPI_ESP8266.c
+│   │   │   ├── TFT_eSPI_ESP8266.h
+│   │   │   ├── TFT_eSPI_Generic.c
+│   │   │   ├── TFT_eSPI_Generic.h
+│   │   │   ├── TFT_eSPI_RP2040.c
+│   │   │   ├── TFT_eSPI_RP2040.h
+│   │   │   ├── TFT_eSPI_STM32.c
+│   │   │   └── TFT_eSPI_STM32.h
+│   │   ├── README.md
+│   │   ├── README.txt
+│   │   ├── TFT_config.h
+│   │   ├── TFT_Drivers
+│   │   │   ├── EPD_Defines.h
+│   │   │   ├── GC9A01_Defines.h
+│   │   │   ├── GC9A01_Init.h
+│   │   │   ├── GC9A01_Rotation.h
+│   │   │   ├── HX8357B_Defines.h
+│   │   │   ├── HX8357B_Init.h
+│   │   │   ├── HX8357B_Rotation.h
+│   │   │   ├── HX8357C_Defines.h
+│   │   │   ├── HX8357C_Init.h
+│   │   │   ├── HX8357C_Rotation.h
+│   │   │   ├── HX8357D_Defines.h
+│   │   │   ├── HX8357D_Init.h
+│   │   │   ├── HX8357D_Rotation.h
+│   │   │   ├── ILI9163_Defines.h
+│   │   │   ├── ILI9163_Init.h
+│   │   │   ├── ILI9163_Rotation.h
+│   │   │   ├── ILI9225_Defines.h
+│   │   │   ├── ILI9225_Init.h
+│   │   │   ├── ILI9225_Rotation.h
+│   │   │   ├── ILI9341_Defines.h
+│   │   │   ├── ILI9341_Init.h
+│   │   │   ├── ILI9341_Rotation.h
+│   │   │   ├── ILI9481_Defines.h
+│   │   │   ├── ILI9481_Init.h
+│   │   │   ├── ILI9481_Rotation.h
+│   │   │   ├── ILI9486_Defines.h
+│   │   │   ├── ILI9486_Init.h
+│   │   │   ├── ILI9486_Rotation.h
+│   │   │   ├── ILI9488_Defines.h
+│   │   │   ├── ILI9488_Init.h
+│   │   │   ├── ILI9488_Rotation.h
+│   │   │   ├── R61581_Defines.h
+│   │   │   ├── R61581_Init.h
+│   │   │   ├── R61581_Rotation.h
+│   │   │   ├── RM68120_Defines.h
+│   │   │   ├── RM68120_Init.h
+│   │   │   ├── RM68120_Rotation.h
+│   │   │   ├── RM68140_Defines.h
+│   │   │   ├── RM68140_Init.h
+│   │   │   ├── RM68140_Rotation.h
+│   │   │   ├── S6D02A1_Defines.h
+│   │   │   ├── S6D02A1_Init.h
+│   │   │   ├── S6D02A1_Rotation.h
+│   │   │   ├── SSD1351_Defines.h
+│   │   │   ├── SSD1351_Init.h
+│   │   │   ├── SSD1351_Rotation.h
+│   │   │   ├── SSD1963_Defines.h
+│   │   │   ├── SSD1963_Init.h
+│   │   │   ├── SSD1963_Rotation.h
+│   │   │   ├── ST7735_Defines.h
+│   │   │   ├── ST7735_Init.h
+│   │   │   ├── ST7735_Rotation.h
+│   │   │   ├── ST7789_2_Defines.h
+│   │   │   ├── ST7789_2_Init.h
+│   │   │   ├── ST7789_2_Rotation.h
+│   │   │   ├── ST7789_Defines.h
+│   │   │   ├── ST7789_Init.h
+│   │   │   ├── ST7789_Rotation.h
+│   │   │   ├── ST7796_Defines.h
+│   │   │   ├── ST7796_Init.h
+│   │   │   └── ST7796_Rotation.h
+│   │   ├── TFT_eSPI.cpp
+│   │   ├── TFT_eSPI.h
+│   │   ├── Tools
+│   │   │   ├── bmp2array4bit
+│   │   │   │   ├── bmp2array4bit.py
+│   │   │   │   ├── README.md
+│   │   │   │   └── star.bmp
+│   │   │   ├── Create_Smooth_Font
+│   │   │   │   └── Create_font
+│   │   │   │       ├── Create_font.pde
+│   │   │   │       ├── data
+│   │   │   │       │   └── Final-Frontier.ttf
+│   │   │   │       └── FontFiles
+│   │   │   │           └── Final-Frontier28.h
+│   │   │   └── Screenshot_client
+│   │   │       └── Screenshot_client.pde
+│   │   ├── User_Setup.h
+│   │   ├── User_Setups
+│   │   │   ├── Setup0_Sprite.h
+│   │   │   ├── Setup100_RP2040_ILI9488_parallel.h
+│   │   │   ├── Setup101_RP2040_ILI9481_parallel.h
+│   │   │   ├── Setup102_RP2040_ILI9341_parallel.h
+│   │   │   ├── Setup103_RP2040_ILI9486_parallel.h
+│   │   │   ├── Setup104_RP2040_ST7796_parallel.h
+│   │   │   ├── Setup105_RP2040_ST7796_16bit_parallel.h
+│   │   │   ├── Setup106_RP2040_ILI9481_16bit_parallel.h
+│   │   │   ├── Setup107_RP2040_ILI9341_16bit_parallel.h
+│   │   │   ├── Setup108_RP2040_ST7735.h
+│   │   │   ├── Setup10_RPi_touch_ILI9486.h
+│   │   │   ├── Setup11_RPi_touch_ILI9486.h
+│   │   │   ├── Setup12_M5Stack_Basic_Core.h
+│   │   │   ├── Setup135_ST7789.h
+│   │   │   ├── Setup136_LilyGo_TTV.h
+│   │   │   ├── Setup137_LilyGo_TDisplay_RP2040.h
+│   │   │   ├── Setup138_Pico_Explorer_Base_RP2040_ST7789.h
+│   │   │   ├── Setup13_ILI9481_Parallel.h
+│   │   │   ├── Setup14_ILI9341_Parallel.h
+│   │   │   ├── Setup15_HX8357D.h
+│   │   │   ├── Setup16_ILI9488_Parallel.h
+│   │   │   ├── Setup17_ePaper.h
+│   │   │   ├── Setup18_ST7789.h
+│   │   │   ├── Setup19_RM68140_Parallel.h
+│   │   │   ├── Setup1_ILI9341.h
+│   │   │   ├── Setup200_GC9A01.h
+│   │   │   ├── Setup201_WT32_SC01.h
+│   │   │   ├── Setup202_SSD1351_128.h
+│   │   │   ├── Setup203_ST7789.h
+│   │   │   ├── Setup204_ESP32_TouchDown.h
+│   │   │   ├── Setup205_ESP32_TouchDown_S3.h
+│   │   │   ├── Setup206_LilyGo_T_Display_S3.h
+│   │   │   ├── Setup207_LilyGo_T_HMI.h
+│   │   │   ├── Setup209_LilyGo_T_Dongle_S3.h
+│   │   │   ├── Setup20_ILI9488.h
+│   │   │   ├── Setup210_LilyGo_T_Embed_S3.h
+│   │   │   ├── Setup211_LilyGo_T_QT_Pro_S3.h
+│   │   │   ├── Setup212_LilyGo_T_PicoPro.h
+│   │   │   ├── Setup213_LilyGo_T_Beam_Shield.h
+│   │   │   ├── Setup21_ILI9488.h
+│   │   │   ├── Setup22_TTGO_T4.h
+│   │   │   ├── Setup22_TTGO_T4_v1.3.h
+│   │   │   ├── Setup23_TTGO_TM.h
+│   │   │   ├── Setup24_ST7789.h
+│   │   │   ├── Setup250_ESP32_S3_Box_Lite.h
+│   │   │   ├── Setup251_ESP32_S3_Box.h
+│   │   │   ├── Setup25_TTGO_T_Display.h
+│   │   │   ├── Setup26_TTGO_T_Wristband.h
+│   │   │   ├── Setup27_RPi_ST7796_ESP32.h
+│   │   │   ├── Setup28_RPi_ST7796_ESP8266.h
+│   │   │   ├── Setup29b_ILI9341_STM32.h
+│   │   │   ├── Setup29_ILI9341_STM32.h
+│   │   │   ├── Setup2_ST7735.h
+│   │   │   ├── Setup301_BW16_ST7735.h
+│   │   │   ├── Setup302_Waveshare_ESP32S3_GC9A01.h
+│   │   │   ├── Setup30_ILI9341_Parallel_STM32.h
+│   │   │   ├── Setup31_ST7796_Parallel_STM32.h
+│   │   │   ├── Setup32_ILI9341_STM32F103.h
+│   │   │   ├── Setup33_RPi_ILI9486_STM32.h
+│   │   │   ├── Setup34_ILI9481_Parallel_STM32.h
+│   │   │   ├── Setup35_ILI9341_STM32_Port_Bus.h
+│   │   │   ├── Setup36_RPi_touch_ST7796.h
+│   │   │   ├── Setup3_ILI9163.h
+│   │   │   ├── Setup42_ILI9341_ESP32.h
+│   │   │   ├── Setup43_ST7735.h
+│   │   │   ├── Setup44_TTGO_CameraPlus.h
+│   │   │   ├── Setup45_TTGO_T_Watch.h
+│   │   │   ├── Setup46_GC9A01_ESP32.h
+│   │   │   ├── Setup47_ST7735.h
+│   │   │   ├── Setup4_S6D02A1.h
+│   │   │   ├── Setup50_SSD1963_Parallel.h
+│   │   │   ├── Setup51_LilyPi_ILI9481.h
+│   │   │   ├── Setup52_LilyPi_ST7796.h
+│   │   │   ├── Setup5_RPi_ILI9486.h
+│   │   │   ├── Setup60_RP2040_ILI9341.h
+│   │   │   ├── Setup60_RP2040_RPI_MHS.h
+│   │   │   ├── Setup61_RP2040_ILI9341_PIO_SPI.h
+│   │   │   ├── Setup62_RP2040_Nano_Connect_ILI9341.h
+│   │   │   ├── Setup66_Seeed_XIAO_Round.h
+│   │   │   ├── Setup6_RPi_Wr_ILI9486.h
+│   │   │   ├── Setup70b_ESP32_S3_ILI9341.h
+│   │   │   ├── Setup70c_ESP32_C3_ILI9341.h
+│   │   │   ├── Setup70d_ILI9488_S3_Parallel.h
+│   │   │   ├── Setup70_ESP32_S2_ILI9341.h
+│   │   │   ├── Setup70f_ESP32_S2_ST7735.h
+│   │   │   ├── Setup70h_ESP32_S3_GC9A01.h
+│   │   │   ├── Setup71_ESP32_S2_ST7789.h
+│   │   │   ├── Setup72_ESP32_ST7789_172x320.h
+│   │   │   ├── Setup7_ST7735_128x128.h
+│   │   │   ├── Setup8_ILI9163_128x128.h
+│   │   │   ├── Setup9_ST7735_Overlap.h
+│   │   │   ├── SetupX_Template.h
+│   │   │   └── User_Custom_Fonts.h
+│   │   └── User_Setup_Select.h
+│   ├── TFT_eSPI_QRcode
+│   │   ├── examples
+│   │   │   ├── basic
+│   │   │   │   └── basic.ino
+│   │   │   └── wifi
+│   │   │       └── wifi.ino
+│   │   ├── keywords.txt
+│   │   ├── library.json
+│   │   ├── library.properties
+│   │   ├── README.md
+│   │   └── src
+│   │       ├── frame.c
+│   │       ├── qrbits.h
+│   │       ├── qrcode.cpp
+│   │       ├── qrcode.h
+│   │       ├── qrencode.c
+│   │       └── qrencode.h
+│   └── utility
+│       ├── AXP192.cpp
+│       ├── AXP192.h
+│       ├── bq27220.cpp
+│       ├── bq27220.h
+│       ├── Keyboard.cpp
+│       ├── Keyboard_def.h
+│       └── Keyboard.h
+├── LICENSE
+├── media
+│   ├── artworks
+│   │   ├── bruce-aquarium.png
+│   │   ├── bruce-lab.jpg
+│   │   ├── bruce-meds.png
+│   │   ├── bruce-rf.png
+│   │   ├── bruce-sat-1.png
+│   │   ├── bruce-sat-2.png
+│   │   └── bruce-working.jpg
+│   ├── connections
+│   │   ├── cc1101_cardputer_sdniffer.png
+│   │   ├── cc1101_cardputer_standalone.jpg
+│   │   ├── cc1101_stick.jpg
+│   │   ├── cc1101_stick_SDCard.jpg
+│   │   ├── ibutton_sticks.jpg
+│   │   ├── pn532_i2c.jpg
+│   │   ├── pn532_spi.jpg
+│   │   ├── rc522_stick.jpg
+│   │   ├── spi_pins.excalidraw.png
+│   │   ├── T-Embed CC1101 - NRF24.bmp
+│   │   └── T-Embed CC1101 - NRF24.png
+│   ├── pcbs
+│   │   ├── Pirata
+│   │   │   ├── back.png
+│   │   │   └── front.png
+│   │   ├── smoochie
+│   │   │   ├── back.png
+│   │   │   ├── Bruce_PCB_full.png
+│   │   │   └── front.png
+│   │   ├── TH3_KR4K3N
+│   │   │   └── pcb_back.jpg
+│   │   └── ultramarines
+│   │       ├── ultramarines_full_side.jpg
+│   │       ├── ultramarines_pcb_back.jpg
+│   │       └── ultramarines_pcb_front.png
+│   └── pictures
+│       ├── 3d_case_parts.png
+│       ├── bruce_banner.jpg
+│       ├── bruce_hd.png
+│       ├── core.png
+│       ├── cyd.png
+│       ├── lilygo-t-display-s3.jpg
+│       ├── nfc.gif
+│       ├── pic1.png
+│       ├── pic2.png
+│       ├── pic3.png
+│       ├── pic4.png
+│       ├── pic5.png
+│       └── stick.png
+├── patch.py
+├── pcbs
+│   ├── Bruce_PCB_smoochie
+│   │   ├── 3d
+│   │   │   ├── Bruce_PCB_V2_3dCase.zip
+│   │   │   └── README.md
+│   │   ├── BOM_Bruce_PCB_v2_Smoochiee.xlsx
+│   │   ├── Bruce_PCB_Smoochiee_Pick_and_Plack.xlsx
+│   │   ├── Bruce_PCB_v2_Schematic.pdf
+│   │   ├── gerber
+│   │   │   ├── BRUCE_MANUAL_BUILD.zip
+│   │   │   └── Bruce_PCB_v2_Smoochiee.zip
+│   │   └── README.md
+│   ├── M5Stick_Intermidiate_ultramarines
+│   │   ├── Gerber_m5module_PCB_m5module_2024-11-18.zip
+│   │   └── README.md
+│   ├── README.md
+│   └── StickCPlus_PCB_Pirata
+│       ├── BOM of Pirata Board.xlsx
+│       ├── Pirata Board Schematics.pdf
+│       ├── Pirata_StickC_Board.zip
+│       └── Readme.md
+├── platformio.ini
+├── README.md
+├── sd_files
+│   ├── BadUSB and BlueDucky
+│   │   └── Bruce_t_Best.txt
+│   ├── infrared
+│   │   ├── ACs
+│   │   │   ├── Black_and_Decker
+│   │   │   │   └── Portable.ir
+│   │   │   ├── Carrier
+│   │   │   │   └── Carrier_orlen_ac.ir
+│   │   │   ├── Electrolux
+│   │   │   │   └── Electrol_ESV09CRO_B2I.ir
+│   │   │   ├── Lennox
+│   │   │   │   └── Lennox_AC.ir
+│   │   │   ├── LG
+│   │   │   │   ├── LG_AC_2.ir
+│   │   │   │   ├── LG_AC.ir
+│   │   │   │   ├── LG_COV30332906_AC.ir
+│   │   │   │   ├── LG_LP1015WNR_AC.ir
+│   │   │   │   ├── LG_LP1417GSR_AC.ir
+│   │   │   │   ├── LG_LP1419IVSM.ir
+│   │   │   │   ├── LG_R12AWN-NB11.ir
+│   │   │   │   └── LG_SX122CL.ir
+│   │   │   ├── Midea
+│   │   │   │   ├── Midea_AC_MAW05R1WBL.ir
+│   │   │   │   ├── Midea_MP12SVKBA3RCM.ir
+│   │   │   │   ├── Midea_silent_cool_26_pro.ir
+│   │   │   │   └── Midea_WWK08CR81N.ir
+│   │   │   ├── Panasonic
+│   │   │   │   ├── Panasonic_A75C4187.ir
+│   │   │   │   ├── Panasonic_Climate_A75C2600.ir
+│   │   │   │   └── Panasonic_CWA75C4179.ir
+│   │   │   ├── Rinnai
+│   │   │   │   └── Rinnai_AC.ir
+│   │   │   ├── Samsung
+│   │   │   │   ├── Samsung_AC_AR12K.ir
+│   │   │   │   ├── Samsung_AR13TYHZCWKN.ir
+│   │   │   │   └── Samsung_Wind-Free.ir
+│   │   │   ├── Sharp
+│   │   │   │   ├── Sharp AH-A9UCD.ir
+│   │   │   │   ├── Sharp_AH_X9VEW_AC.ir
+│   │   │   │   └── Sharp_CVP10MX.ir
+│   │   │   ├── TCL
+│   │   │   │   └── Tcl.ir
+│   │   │   ├── Toshiba
+│   │   │   │   ├── Toshiba_AC.ir
+│   │   │   │   ├── Toshiba_RAS13SKV2E.ir
+│   │   │   │   └── Toshiba_RG57H4.ir
+│   │   │   └── Xiaomi
+│   │   │       └── Xiaomi_AC.ir
+│   │   ├── Consoles
+│   │   │   ├── Microsoft
+│   │   │   │   ├── Xb1_8BitDo_Media_remote_short.ir
+│   │   │   │   ├── XBOX360_Media.ir
+│   │   │   │   ├── XBox_DVD_Media_Playback_Kit.ir
+│   │   │   │   ├── Xbox.ir
+│   │   │   │   └── Xbox_One_Media_Remote.ir
+│   │   │   ├── Nintendo
+│   │   │   │   └── Gameboy
+│   │   │   │       └── Pokemon_Silver_Mystery_Gift.ir
+│   │   │   ├── Philips
+│   │   │   │   └── CDi_Commander.ir
+│   │   │   └── PlayStation
+│   │   │       └── PlayStation_2.ir
+│   │   ├── TVs
+│   │   │   ├── Android
+│   │   │   │   └── Android_TV_MXQ.ir
+│   │   │   ├── CCE
+│   │   │   │   └── CCE_RC512_Remote.ir
+│   │   │   ├── Dynex
+│   │   │   │   ├── Dynex_DX-RC01A-12.ir
+│   │   │   │   └── Dynex_EN21669D.ir
+│   │   │   ├── LG
+│   │   │   │   ├── LG_24LJ4840.ir
+│   │   │   │   ├── LG_27GR95QE_TV.ir
+│   │   │   │   ├── LG_32LF650V.ir
+│   │   │   │   ├── LG_32LN5406.ir
+│   │   │   │   ├── LG_43NANO779PA.ir
+│   │   │   │   ├── LG_48LV340H.ir
+│   │   │   │   ├── LG_4K_TV.ir
+│   │   │   │   ├── LG_55LB870V_ZA.ir
+│   │   │   │   ├── LG_55UN7300AUD.ir
+│   │   │   │   ├── LG_75UJ6470.ir
+│   │   │   │   ├── LG_AKB69680401.ir
+│   │   │   │   ├── LG_AKB72913118.ir
+│   │   │   │   ├── LG_AKB72914048.ir
+│   │   │   │   ├── LG_AKB72915206.ir
+│   │   │   │   ├── LG_AKB73275675.ir
+│   │   │   │   ├── LG_AKB75095307.ir
+│   │   │   │   ├── LG_AKB75675311.ir
+│   │   │   │   ├── LG_AKB75855501.ir
+│   │   │   │   ├── LG_C1.ir
+│   │   │   │   ├── LG_C9_magic_remote.ir
+│   │   │   │   ├── LG_Factory_Service.ir
+│   │   │   │   ├── LG_Hotel_TV_Home2.ir
+│   │   │   │   ├── LG_Hotel_tv.ir
+│   │   │   │   ├── LG.ir
+│   │   │   │   ├── LG_MKJ39170828_Service.ir
+│   │   │   │   ├── LG_MR21GC_Magic_Remote.ir
+│   │   │   │   ├── LG_OLED65C8PUA.ir
+│   │   │   │   ├── LG_TV_42LF5800.ir
+│   │   │   │   └── LG_TV_AKB75375604.ir
+│   │   │   ├── Panasonic
+│   │   │   │   ├── Panasonic_58JX800_Series.ir
+│   │   │   │   ├── Panasonic_N2QAYA_152.ir
+│   │   │   │   ├── Panasonic_N2QAYB000705.ir
+│   │   │   │   ├── Panasonic_N2QAYB000715.ir
+│   │   │   │   ├── Panasonic_N2QAYB000752_Full.ir
+│   │   │   │   ├── Panasonic_N2QAYB000752.ir
+│   │   │   │   ├── Panasonic_N2QAYB000926.ir
+│   │   │   │   ├── Panasonic_TC-P50S2.ir
+│   │   │   │   ├── Panasonic_TC-P50U1.ir
+│   │   │   │   ├── Panasonic_TH-43HS550K.ir
+│   │   │   │   ├── Panasonic_TX-40HX800B.ir
+│   │   │   │   ├── Panasonic_TX_42AS650E.ir
+│   │   │   │   ├── Panasonic_TX_43GXW584.ir
+│   │   │   │   ├── Panasonic_TX_L42E5E.ir
+│   │   │   │   ├── Panasonic_TX-P50C10E.ir
+│   │   │   │   └── Panasonic_Unknown_Full.ir
+│   │   │   ├── Philips
+│   │   │   │   ├── Philips_14PT136B00.ir
+│   │   │   │   ├── Philips_22IT_TV_Monitor.ir
+│   │   │   │   ├── Philips_32PFL4208T.ir
+│   │   │   │   ├── Philips_32PFL7403S.ir
+│   │   │   │   ├── Philips_32PFL7962D12.ir
+│   │   │   │   ├── Philips_40HFL3010T12.ir
+│   │   │   │   ├── Philips_436M6VBPAB.ir
+│   │   │   │   ├── Philips_5766_Series.ir
+│   │   │   │   ├── Philips_generic.ir
+│   │   │   │   ├── Philips_sf256.ir
+│   │   │   │   ├── Philips_TV_14PV172_08.ir
+│   │   │   │   ├── Philips_TV_48OLED806.ir
+│   │   │   │   ├── Philips_TV_7000LED_42PFL7695H.ir
+│   │   │   │   ├── Philips_TV_7956_Series.ir
+│   │   │   │   ├── PhilipsTV.ir
+│   │   │   │   ├── Philips_TV_Universal.ir
+│   │   │   │   └── Philips_XXPFL9955H.ir
+│   │   │   ├── RCA
+│   │   │   │   ├── RCA_24_Roku.ir
+│   │   │   │   ├── RCA_CRK50A.ir
+│   │   │   │   ├── RCA_P46731AT_TV.ir
+│   │   │   │   ├── RCA_RCR314WR_ RCA313BR.ir
+│   │   │   │   ├── RCA_RLDED3258A-B.ir
+│   │   │   │   ├── RCA_RokuTV_RTR4061-B-CA.ir
+│   │   │   │   ├── RCA_RT2471_AC.ir
+│   │   │   │   └── RCA_TV_2.ir
+│   │   │   ├── Roku
+│   │   │   │   └── Roku_Standalone.ir
+│   │   │   ├── Samsung
+│   │   │   │   ├── Samsung_AA-00721A
+│   │   │   │   ├── Samsung_AA59-00443A.ir
+│   │   │   │   ├── Samsung_AA59-00580A.ir
+│   │   │   │   ├── Samsung_AA59-00741A.ir
+│   │   │   │   ├── Samsung_AA59-00786A.ir
+│   │   │   │   ├── Samsung_AA59.ir
+│   │   │   │   ├── Samsung_AA81-00243A.ir
+│   │   │   │   ├── Samsung_BN59-01081A.ir
+│   │   │   │   ├── Samsung_BN59-01175N.ir
+│   │   │   │   ├── Samsung_BN59-01178W.ir
+│   │   │   │   ├── Samsung_BN59-01180A.ir
+│   │   │   │   ├── Samsung_BN59-01198_R.ir
+│   │   │   │   ├── Samsung_BN59-01247A.ir
+│   │   │   │   ├── Samsung_BN59-01301A.ir
+│   │   │   │   ├── Samsung_BN59-01303A.ir
+│   │   │   │   ├── Samsung_BN59-01315B.ir
+│   │   │   │   ├── Samsung_BN59-01315J.ir
+│   │   │   │   ├── Samsung_BN59-01358C.ir
+│   │   │   │   ├── Samsung_BN59-01385C.ir
+│   │   │   │   ├── Samsung_BN59-01391A.ir
+│   │   │   │   ├── Samsung_BN59.ir
+│   │   │   │   ├── Samsung_Broadband_Hospitality.ir
+│   │   │   │   ├── Samsung_E6.ir
+│   │   │   │   ├── Samsung_H6300_TV.ir
+│   │   │   │   ├── Samsung_HQ24ED470AK.ir
+│   │   │   │   ├── Samsung.ir
+│   │   │   │   ├── Samsung_LE37S71B.ir
+│   │   │   │   ├── Samsung_LE40R87BD.ir
+│   │   │   │   ├── Samsung_LN46C650L1F.ir
+│   │   │   │   ├── Samsung_LW17E34C.ir
+│   │   │   │   ├── Samsung_P2770HD.ir
+│   │   │   │   ├── Samsung_QM55RA.ir
+│   │   │   │   ├── Samsung_Royal_Caribbean.ir
+│   │   │   │   ├── Samsung_Service_Menu.ir
+│   │   │   │   ├── Samsung_Smart_Remote.ir
+│   │   │   │   ├── Samsung_TV_1.ir
+│   │   │   │   ├── Samsung_TV_2.ir
+│   │   │   │   ├── Samsung_TV_Full.ir
+│   │   │   │   ├── Samsung_UE26C4000PW.ir
+│   │   │   │   ├── Samsung_UE32F4000AW.ir
+│   │   │   │   ├── Samsung_UE32F4000.ir
+│   │   │   │   ├── Samsung_UE48JU6490U.ir
+│   │   │   │   ├── Samsung_UE75TU7125K.ir
+│   │   │   │   ├── Samsung_UN32EH5000F.ir
+│   │   │   │   ├── Samsung_UN40C5000QFXZA.ir
+│   │   │   │   ├── Samsung_UN60JU6500_Discrete.ir
+│   │   │   │   ├── Samsung_UN60JU6500.ir
+│   │   │   │   └── Samsung_Unknown_Model.ir
+│   │   │   ├── Sharp
+│   │   │   │   ├── Sharp_13VT-L100.ir
+│   │   │   │   ├── Sharp_Aquos_32BG3E.ir
+│   │   │   │   ├── Sharp_Aquos_JP.ir
+│   │   │   │   ├── Sharp_g0684cesa_NES_TV.ir
+│   │   │   │   ├── Sharp_LC-42LB261U.ir
+│   │   │   │   ├── Sharp_LC-RC1-16.ir
+│   │   │   │   ├── Sharp_Roku_TV.ir
+│   │   │   │   ├── Sharp_TV2.ir
+│   │   │   │   └── Sharp_tv.ir
+│   │   │   ├── Sony
+│   │   │   │   ├── Sony_Bravia.ir
+│   │   │   │   ├── Sony_Bravia_KD-55XF80xx-49XF80xx-43XF80xx.ir
+│   │   │   │   ├── Sony_Bravia_KDL-46W905A.ir
+│   │   │   │   ├── Sony_FW_75BZ40H.ir
+│   │   │   │   ├── Sony_KD-55X80CK.ir
+│   │   │   │   ├── Sony_KD.ir
+│   │   │   │   ├── Sony_KDL-55HX850.ir
+│   │   │   │   ├── Sony_RMEA002.ir
+│   │   │   │   ├── Sony_RM_ED016.ir
+│   │   │   │   ├── Sony_RM_ED045.ir
+│   │   │   │   ├── Sony_RM-GD014.ir
+│   │   │   │   ├── Sony_RMT_TB400U.ir
+│   │   │   │   ├── Sony_RMT_TX100D.ir
+│   │   │   │   ├── Sony_RMT_TX200U.ir
+│   │   │   │   ├── Sony_RM-V310.ir
+│   │   │   │   ├── Sony_RM-YD017.ir
+│   │   │   │   ├── Sony_RM-YD018.ir
+│   │   │   │   ├── Sony_RM-YD092.ir
+│   │   │   │   ├── Sony_SFRTV5.ir
+│   │   │   │   ├── SonyTV.ir
+│   │   │   │   ├── Sony_X2182U.ir
+│   │   │   │   ├── Sony_XBR.ir
+│   │   │   │   ├── Sony_XBR_RM-TD017.ir
+│   │   │   │   └── Sony_XBR_RMT-TX200U.ir
+│   │   │   ├── TCL
+│   │   │   │   ├── TCL_32S327.ir
+│   │   │   │   ├── TCL_43S446.ir
+│   │   │   │   ├── TCL_LED49D2930.ir
+│   │   │   │   ├── TCL_Roku_TV.ir
+│   │   │   │   ├── TCL_ROKU_US.ir
+│   │   │   │   ├── TCL_UnknownModel1.ir
+│   │   │   │   ├── TCL_UnknownModel2.ir
+│   │   │   │   └── TCL_UnknownModel3.ir
+│   │   │   ├── Toshiba
+│   │   │   │   ├── Toshiba_32AV502U.ir
+│   │   │   │   ├── Toshiba_43LF421U21.ir
+│   │   │   │   ├── Toshiba_50C350LC.ir
+│   │   │   │   ├── Toshiba_CT-32F2.ir
+│   │   │   │   ├── Toshiba_Ct-8563.ir
+│   │   │   │   ├── Toshiba_CT-90325.ir
+│   │   │   │   ├── Toshiba_CT-9922.ir
+│   │   │   │   ├── Toshiba_FireTV.ir
+│   │   │   │   └── Toshiba_SE_R0305_32CV100U.ir
+│   │   │   └── Xiaomi
+│   │   │       └── Xiaomi_TV.ir
+│   │   └── Universal_TV_Remotes
+│   │       ├── EHP
+│   │       │   └── EHP_Waagen_Universal_Remote.ir
+│   │       ├── One_For_All
+│   │       │   └── OFA_8_Universal_Remote.ir
+│   │       ├── RemotesReplaced
+│   │       │   └── RemotesReplaced_RRS41.ir
+│   │       ├── Sanyo
+│   │       │   └── Sanyo_universal.ir
+│   │       ├── UNIVERSAL_POWER_OFF_DEVICES.ir
+│   │       └── User_Created
+│   │           └── UniversalSamsungFF.ir
+│   ├── interpreter
+│   │   ├── browser_bruce.js
+│   │   ├── dino_game.js
+│   │   ├── dtmf.js
+│   │   ├── Example1.js
+│   │   ├── gifs
+│   │   │   ├── half_patrick.gif
+│   │   │   ├── half_rainbow.gif
+│   │   │   ├── half_rick.gif
+│   │   │   └── half_spongebob.gif
+│   │   ├── gifs.js
+│   │   ├── ir2keys.js
+│   │   ├── ir_brute.js
+│   │   ├── rf_brute.js
+│   │   ├── Snake_Cardputer.js
+│   │   ├── Snake_Stick_CoreS3.js
+│   │   └── wifi_brute.js
+│   ├── nfc
+│   │   ├── bruce_repo.rfid
+│   │   └── rickroll.rfid
+│   ├── portals
+│   │   ├── en
+│   │   │   ├── facebook.html
+│   │   │   ├── google.html
+│   │   │   ├── instagram.html
+│   │   │   ├── microsoft.html
+│   │   │   └── router_update.html
+│   │   └── pt-br
+│   │       ├── facebook.html
+│   │       ├── google.html
+│   │       ├── instagram.html
+│   │       ├── microsoft.html
+│   │       └── router_update.html
+│   ├── pwnagotchi
+│   │   └── pwngridspam.txt
+│   ├── README.md
+│   ├── reverseshell
+│   │   └── README.md
+│   ├── themes
+│   │   ├── example
+│   │   │   ├── Pirata_BW_jpg.zip
+│   │   │   ├── Pirata_png.zip
+│   │   │   ├── README.md
+│   │   │   └── Sharky.zip
+│   │   ├── README.md
+│   │   └── Theme_Builder.html
+│   └── wifi
+│       └── evil portal
+│           └── readme.md
+├── src
+│   ├── core
+│   │   ├── config.cpp
+│   │   ├── config.h
+│   │   ├── configPins.cpp
+│   │   ├── configPins.h
+│   │   ├── connect
+│   │   │   ├── esp_connection.cpp
+│   │   │   ├── esp_connection.h
+│   │   │   ├── file_sharing.cpp
+│   │   │   ├── file_sharing.h
+│   │   │   ├── serial_commands.cpp
+│   │   │   └── serial_commands.h
+│   │   ├── display.cpp
+│   │   ├── display.h
+│   │   ├── i2c_finder.cpp
+│   │   ├── i2c_finder.h
+│   │   ├── led_control.cpp
+│   │   ├── led_control.h
+│   │   ├── main_menu.cpp
+│   │   ├── main_menu.h
+│   │   ├── massStorage.cpp
+│   │   ├── massStorage.h
+│   │   ├── menu_items
+│   │   │   ├── BleMenu.cpp
+│   │   │   ├── BleMenu.h
+│   │   │   ├── ClockMenu.cpp
+│   │   │   ├── ClockMenu.h
+│   │   │   ├── ConfigMenu.cpp
+│   │   │   ├── ConfigMenu.h
+│   │   │   ├── ConnectMenu.cpp
+│   │   │   ├── ConnectMenu.h
+│   │   │   ├── FileMenu.cpp
+│   │   │   ├── FileMenu.h
+│   │   │   ├── FMMenu.cpp
+│   │   │   ├── FMMenu.h
+│   │   │   ├── GpsMenu.cpp
+│   │   │   ├── GpsMenu.h
+│   │   │   ├── IRMenu.cpp
+│   │   │   ├── IRMenu.h
+│   │   │   ├── NRF24.cpp
+│   │   │   ├── NRF24.h
+│   │   │   ├── OthersMenu.cpp
+│   │   │   ├── OthersMenu.h
+│   │   │   ├── RFIDMenu.cpp
+│   │   │   ├── RFIDMenu.h
+│   │   │   ├── RFMenu.cpp
+│   │   │   ├── RFMenu.h
+│   │   │   ├── ScriptsMenu.cpp
+│   │   │   ├── ScriptsMenu.h
+│   │   │   ├── WifiMenu.cpp
+│   │   │   └── WifiMenu.h
+│   │   ├── mykeyboard.cpp
+│   │   ├── mykeyboard.h
+│   │   ├── net_utils.cpp
+│   │   ├── net_utils.h
+│   │   ├── passwords.cpp
+│   │   ├── passwords.h
+│   │   ├── powerSave.cpp
+│   │   ├── powerSave.h
+│   │   ├── scrollableTextArea.cpp
+│   │   ├── scrollableTextArea.h
+│   │   ├── sd_functions.cpp
+│   │   ├── sd_functions.h
+│   │   ├── serialcmds.cpp
+│   │   ├── serialcmds.h
+│   │   ├── serial_commands
+│   │   │   ├── badusb_commands.cpp
+│   │   │   ├── badusb_commands.h
+│   │   │   ├── cli.cpp
+│   │   │   ├── cli.h
+│   │   │   ├── crypto_commands.cpp
+│   │   │   ├── crypto_commands.h
+│   │   │   ├── gpio_commands.cpp
+│   │   │   ├── gpio_commands.h
+│   │   │   ├── helpers.cpp
+│   │   │   ├── helpers.h
+│   │   │   ├── interpreter_commands.cpp
+│   │   │   ├── interpreter_commands.h
+│   │   │   ├── ir_commands.cpp
+│   │   │   ├── ir_commands.h
+│   │   │   ├── power_commands.cpp
+│   │   │   ├── power_commands.h
+│   │   │   ├── rf_commands.cpp
+│   │   │   ├── rf_commands.h
+│   │   │   ├── screen_commands.cpp
+│   │   │   ├── screen_commands.h
+│   │   │   ├── settings_commands.cpp
+│   │   │   ├── settings_commands.h
+│   │   │   ├── sound_commands.cpp
+│   │   │   ├── sound_commands.h
+│   │   │   ├── storage_commands.cpp
+│   │   │   ├── storage_commands.h
+│   │   │   ├── util_commands.cpp
+│   │   │   ├── util_commands.h
+│   │   │   ├── wifi_commands.cpp
+│   │   │   └── wifi_commands.h
+│   │   ├── settings.cpp
+│   │   ├── settings.h
+│   │   ├── startup_app.cpp
+│   │   ├── startup_app.h
+│   │   ├── theme.cpp
+│   │   ├── theme.h
+│   │   ├── type_convertion.cpp
+│   │   ├── type_convertion.h
+│   │   ├── utils.cpp
+│   │   ├── utils.h
+│   │   └── wifi
+│   │       ├── webInterface.cpp
+│   │       ├── webInterface.h
+│   │       ├── wg.cpp
+│   │       ├── wg.h
+│   │       ├── wifi_common.cpp
+│   │       └── wifi_common.h
+│   ├── main.cpp
+│   └── modules
+│       ├── badusb_ble
+│       │   ├── ducky_typer.cpp
+│       │   └── ducky_typer.h
+│       ├── bjs_interpreter
+│       │   ├── display_js.cpp
+│       │   ├── display_js.h
+│       │   ├── gui_js.cpp
+│       │   ├── gui_js.h
+│       │   ├── helpers_js.cpp
+│       │   ├── helpers_js.h
+│       │   ├── interpreter.cpp
+│       │   ├── interpreter.h
+│       │   ├── wifi_js.cpp
+│       │   └── wifi_js.h
+│       ├── ble
+│       │   ├── ble_common.cpp
+│       │   ├── ble_common.h
+│       │   ├── ble_ninebot.cpp
+│       │   ├── ble_ninebot.h
+│       │   ├── ble_spam.cpp
+│       │   └── ble_spam.h
+│       ├── fm
+│       │   ├── fm.cpp
+│       │   └── fm.h
+│       ├── gps
+│       │   ├── gps_tracker.cpp
+│       │   ├── gps_tracker.h
+│       │   ├── wardriving.cpp
+│       │   ├── wardriving.h
+│       │   ├── wigle.cpp
+│       │   └── wigle.h
+│       ├── ir
+│       │   ├── custom_ir.cpp
+│       │   ├── custom_ir.h
+│       │   ├── ir_jammer.cpp
+│       │   ├── ir_jammer.h
+│       │   ├── ir_read.cpp
+│       │   ├── ir_read.h
+│       │   ├── TV-B-Gone.cpp
+│       │   ├── TV-B-Gone.h
+│       │   └── WORLD_IR_CODES.h
+│       ├── NRF24
+│       │   ├── nrf_common.cpp
+│       │   ├── nrf_common.h
+│       │   ├── nrf_jammer.cpp
+│       │   ├── nrf_jammer.h
+│       │   ├── nrf_spectrum.cpp
+│       │   └── nrf_spectrum.h
+│       ├── others
+│       │   ├── audio.cpp
+│       │   ├── audio.h
+│       │   ├── clicker.cpp
+│       │   ├── clicker.h
+│       │   ├── ibutton.cpp
+│       │   ├── ibutton.h
+│       │   ├── mic.cpp
+│       │   ├── mic.h
+│       │   ├── openhaystack.cpp
+│       │   ├── openhaystack.h
+│       │   ├── qrcode_menu.cpp
+│       │   ├── qrcode_menu.h
+│       │   ├── timer.cpp
+│       │   ├── timer.h
+│       │   ├── tururururu.cpp
+│       │   └── tururururu.h
+│       ├── pwnagotchi
+│       │   ├── mood.cpp
+│       │   ├── mood.h
+│       │   ├── pwnagotchi.cpp
+│       │   ├── pwnagotchi.h
+│       │   ├── pwngrid.cpp
+│       │   ├── pwngrid.h
+│       │   ├── spam.cpp
+│       │   ├── spam.h
+│       │   ├── ui.cpp
+│       │   └── ui.h
+│       ├── reverseShell
+│       │   ├── reverseShell.cpp
+│       │   └── reverseShell.h
+│       ├── rf
+│       │   ├── emit.cpp
+│       │   ├── emit.h
+│       │   ├── record.cpp
+│       │   ├── record.h
+│       │   ├── rf_jammer.cpp
+│       │   ├── rf_jammer.h
+│       │   ├── rf_listen.cpp
+│       │   ├── rf_listen.h
+│       │   ├── rf_scan.cpp
+│       │   ├── rf_scan.h
+│       │   ├── rf_send.cpp
+│       │   ├── rf_send.h
+│       │   ├── rf_spectrum.cpp
+│       │   ├── rf_spectrum.h
+│       │   ├── rf_utils.cpp
+│       │   ├── rf_utils.h
+│       │   ├── rf_waterfall.cpp
+│       │   ├── rf_waterfall.h
+│       │   ├── save.cpp
+│       │   ├── save.h
+│       │   └── structs.h
+│       ├── rfid
+│       │   ├── amiibo.cpp
+│       │   ├── amiibo.h
+│       │   ├── apdu.cpp
+│       │   ├── apdu.h
+│       │   ├── chameleon.cpp
+│       │   ├── chameleon.h
+│       │   ├── pn532ble.cpp
+│       │   ├── pn532ble.h
+│       │   ├── PN532.cpp
+│       │   ├── PN532.h
+│       │   ├── PN532KillerTools.cpp
+│       │   ├── PN532KillerTools.h
+│       │   ├── rfid125.cpp
+│       │   ├── rfid125.h
+│       │   ├── RFID2.cpp
+│       │   ├── RFID2.h
+│       │   ├── RFIDInterface.h
+│       │   ├── tag_o_matic.cpp
+│       │   └── tag_o_matic.h
+│       └── wifi
+│           ├── ap_info.cpp
+│           ├── ap_info.h
+│           ├── clients.cpp
+│           ├── clients.h
+│           ├── dpwo.cpp
+│           ├── dpwo.h
+│           ├── evil_portal.cpp
+│           ├── evil_portal.h
+│           ├── scan_hosts.cpp
+│           ├── scan_hosts.h
+│           ├── sniffer.cpp
+│           ├── sniffer.h
+│           ├── tcp_utils.cpp
+│           ├── tcp_utils.h
+│           ├── wifi_atks.cpp
+│           └── wifi_atks.h
+└── structure.txt
+
+143 directories, 973 files

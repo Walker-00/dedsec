@@ -20,7 +20,7 @@ const int default_webserverporthttp = 80;
 IPAddress AP_GATEWAY(172, 0, 0, 1); // Gateway
 
 AsyncWebServer *server = nullptr; // initialise webserver
-const char *host = "bruce";
+const char *host = "dedsec";
 String uploadFolder = "";
 
 /**********************************************************************
@@ -229,16 +229,16 @@ void drawWebUiScreen(bool mode_ap) {
     tft.drawRoundRect(5, 5, tftWidth - 10, tftHeight - 10, 5, ALCOLOR);
     if (mode_ap) {
         setTftDisplay(0, 0, bruceConfig.bgColor, FM);
-        tft.drawCentreString("BruceNet/brucenet", tftWidth / 2, 7, 1);
+        tft.drawCentreString("DedNet/dednet", tftWidth / 2, 7, 1);
     }
     setTftDisplay(0, 0, ALCOLOR, FM);
-    tft.drawCentreString("BRUCE WebUI", tftWidth / 2, 27, 1);
+    tft.drawCentreString("DedSec WebUI", tftWidth / 2, 27, 1);
     String txt;
     if (!mode_ap) txt = WiFi.localIP().toString();
     else txt = WiFi.softAPIP().toString();
     tft.setTextColor(bruceConfig.priColor);
 
-    tft.drawCentreString("http://bruce.local", tftWidth / 2, 45, 1);
+    tft.drawCentreString("http://dedsec.local", tftWidth / 2, 45, 1);
     setTftDisplay(7, 67);
 
     tft.setTextSize(FM);
@@ -342,7 +342,7 @@ void configureWebServer() {
             response_body,
             "{\"%s\":\"%s\",\"SD\":{\"%s\":\"%s\",\"%s\":\"%s\",\"%s\":\"%s\"},"
             "\"LittleFS\":{\"%s\":\"%s\",\"%s\":\"%s\",\"%s\":\"%s\"}}",
-            "BRUCE_VERSION",
+            "DedSec_VERSION",
             BRUCE_VERSION,
             "free",
             humanReadableSize(SDTotalBytes - SDUsedBytes).c_str(),
