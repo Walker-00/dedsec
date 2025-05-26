@@ -20,7 +20,7 @@ const int default_webserverporthttp = 80;
 IPAddress AP_GATEWAY(172, 0, 0, 1); // Gateway
 
 AsyncWebServer *server = nullptr; // initialise webserver
-const char *host = "dedsec";
+const char *host = "radon";
 String uploadFolder = "";
 
 /**********************************************************************
@@ -229,16 +229,16 @@ void drawWebUiScreen(bool mode_ap) {
     tft.drawRoundRect(5, 5, tftWidth - 10, tftHeight - 10, 5, ALCOLOR);
     if (mode_ap) {
         setTftDisplay(0, 0, bruceConfig.bgColor, FM);
-        tft.drawCentreString("DedNet/dednet", tftWidth / 2, 7, 1);
+        tft.drawCentreString("RadonNet/radonnet", tftWidth / 2, 7, 1);
     }
     setTftDisplay(0, 0, ALCOLOR, FM);
-    tft.drawCentreString("DedSec WebUI", tftWidth / 2, 27, 1);
+    tft.drawCentreString("R4d0n WebUI", tftWidth / 2, 27, 1);
     String txt;
     if (!mode_ap) txt = WiFi.localIP().toString();
     else txt = WiFi.softAPIP().toString();
     tft.setTextColor(bruceConfig.priColor);
 
-    tft.drawCentreString("http://dedsec.local", tftWidth / 2, 45, 1);
+    tft.drawCentreString("http://radon.local", tftWidth / 2, 45, 1);
     setTftDisplay(7, 67);
 
     tft.setTextSize(FM);
