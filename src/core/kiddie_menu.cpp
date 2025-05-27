@@ -2,7 +2,7 @@
 #include "display.h"
 #include <globals.h>
 
-MainMenu::MainMenu() {
+KiddieMenu::KiddieMenu() {
     _menuItems = {
         &wifiMenu,
         &bleMenu,
@@ -33,9 +33,9 @@ MainMenu::MainMenu() {
     _totalItems = _menuItems.size();
 }
 
-MainMenu::~MainMenu() {}
+KiddieMenu::~KiddieMenu() {}
 
-void MainMenu::begin(void) {
+void KiddieMenu::begin(void) {
     returnToMenu = false;
     options = {};
 
@@ -65,5 +65,5 @@ void MainMenu::begin(void) {
             });
         }
     }
-    _currentIndex = loopOptions(options, MENU_TYPE_MAIN, "Main Menu", _currentIndex);
+    _currentIndex = loopOptions(options, MENU_TYPE_MAIN, "Kiddie Menu", _currentIndex);
 };

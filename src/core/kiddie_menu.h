@@ -1,5 +1,5 @@
-#ifndef __MAIN_MENU_H__
-#define __MAIN_MENU_H__
+#ifndef __KIDDIE_MENU_H__
+#define __KIDDIE_MENU_H__
 
 #include <MenuItemInterface.h>
 
@@ -16,9 +16,9 @@
 // #include "menu_items/RFIDMenu.h"
 // #include "menu_items/RFMenu.h"
 // #include "menu_items/ScriptsMenu.h"
-#include "bigboy_menu.h"
+#include "kiddie_menu.h"
 
-class MainMenu {
+class KiddieMenu {
 public:
     FileMenu fileMenu;
     BleMenu bleMenu;
@@ -35,8 +35,8 @@ public:
     ScriptsMenu scriptsMenu;
     WifiMenu wifiMenu;
 
-    MainMenu();
-    ~MainMenu();
+    KiddieMenu();
+    ~KiddieMenu();
 
     void begin(void);
 

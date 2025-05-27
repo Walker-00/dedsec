@@ -1,8 +1,8 @@
-#include "main_menu.h"
+#include "bigboy_menu.h"
 #include "display.h"
 #include <globals.h>
 
-MainMenu::MainMenu() {
+BigBoyMenu::BigBoyMenu() {
     _menuItems = {
         &wifiMenu,
         &bleMenu,
@@ -33,9 +33,9 @@ MainMenu::MainMenu() {
     _totalItems = _menuItems.size();
 }
 
-MainMenu::~MainMenu() {}
+BigBoyMenu::~BigBoyMenu() {}
 
-void MainMenu::begin(void) {
+void BigBoyMenu::begin(void) {
     returnToMenu = false;
     options = {};
 
@@ -65,5 +65,5 @@ void MainMenu::begin(void) {
             });
         }
     }
-    _currentIndex = loopOptions(options, MENU_TYPE_MAIN, "Main Menu", _currentIndex);
+    _currentIndex = loopOptions(options, MENU_TYPE_MAIN, "Big Boy Menu", _currentIndex);
 };

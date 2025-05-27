@@ -1,5 +1,5 @@
-#ifndef __MAIN_MENU_H__
-#define __MAIN_MENU_H__
+#ifndef __BIGBOY_MENU_H__
+#define __BIGBOY_MENU_H__
 
 #include <MenuItemInterface.h>
 
@@ -18,7 +18,7 @@
 #include "menu_items/ScriptsMenu.h"
 #include "menu_items/WifiMenu.h"
 
-class MainMenu {
+class BigBoyMenu {
 public:
     FileMenu fileMenu;
     BleMenu bleMenu;
@@ -35,8 +35,8 @@ public:
     ScriptsMenu scriptsMenu;
     WifiMenu wifiMenu;
 
-    MainMenu();
-    ~MainMenu();
+    BigBoyMenu();
+    ~BigBoyMenu();
 
     void begin(void);
 

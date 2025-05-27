@@ -17,23 +17,27 @@
 // #include "menu_items/RFMenu.h"
 // #include "menu_items/ScriptsMenu.h"
 #include "bigboy_menu.h"
+#include "kiddie_menu.h"
 
 class MainMenu {
 public:
-    FileMenu fileMenu;
-    BleMenu bleMenu;
-    ClockMenu clockMenu;
-    ConnectMenu connectMenu;
-    ConfigMenu configMenu;
-    // FMMenu fmMenu;
-    GpsMenu gpsMenu;
-    IRMenu irMenu;
-    NRF24Menu nrf24Menu;
-    OthersMenu othersMenu;
-    RFIDMenu rfidMenu;
-    RFMenu rfMenu;
-    ScriptsMenu scriptsMenu;
-    WifiMenu wifiMenu;
+    // FileMenu fileMenu;
+    // BleMenu bleMenu;
+    // ClockMenu clockMenu;
+    // ConnectMenu connectMenu;
+    // ConfigMenu configMenu;
+    // // FMMenu fmMenu;
+    // GpsMenu gpsMenu;
+    // IRMenu irMenu;
+    // NRF24Menu nrf24Menu;
+    // OthersMenu othersMenu;
+    // RFIDMenu rfidMenu;
+    // RFMenu rfMenu;
+    // ScriptsMenu scriptsMenu;
+    // WifiMenu wifiMenu;
+    KiddieMenu kiddieMenu;
+    BigBoyMenu bigboyMenu;
+
 
     MainMenu();
     ~MainMenu();
