@@ -5,6 +5,7 @@
 .vscode/extensions.json
 .vscode/ipch
 Bruce3_*.bin
+*.bin
 bruce.conf
 _*.sh
 tmp
