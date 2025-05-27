@@ -47,7 +47,7 @@ public:
 private:
     int _currentIndex = 0;
     int _totalItems = 0;
-    std::vector<MenuItemInterface *> _menuItems;
+    // std::vector<MenuItemInterface *> _menuItems;
 };
 
 #endif
