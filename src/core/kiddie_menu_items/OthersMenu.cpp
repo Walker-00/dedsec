@@ -11,7 +11,7 @@
 #include "modules/others/timer.h"
 #include "modules/others/tururururu.h"
 
-void OthersMenu::optionsMenu() {
+void KiddieOthersMenu::optionsMenu() {
     options = {
         {"QRCodes",      qrcode_menu                              },
         {"Megalodon",    shark_setup                              },
@@ -35,7 +35,7 @@ void OthersMenu::optionsMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "Others");
 }
-void OthersMenu::drawIconImg() {
+void KiddieOthersMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.others),
@@ -44,7 +44,7 @@ void OthersMenu::drawIconImg() {
         true
     );
 }
-void OthersMenu::drawIcon(float scale) {
+void KiddieOthersMenu::drawIcon(float scale) {
     clearIconArea();
     int radius = scale * 7;
 
