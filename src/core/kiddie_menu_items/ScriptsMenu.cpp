@@ -50,7 +50,7 @@ std::vector<Option> getScriptsOptionsList() {
     return opt;
 }
 
-void ScriptsMenu::optionsMenu() {
+void KiddieScriptsMenu::optionsMenu() {
     options = getScriptsOptionsList();
 
     options.push_back({"Load...", run_bjs_script});
@@ -58,7 +58,7 @@ void ScriptsMenu::optionsMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "Scripts");
 }
-void ScriptsMenu::drawIconImg() {
+void KiddieScriptsMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.interpreter),
@@ -67,7 +67,7 @@ void ScriptsMenu::drawIconImg() {
         true
     );
 }
-void ScriptsMenu::drawIcon(float scale) {
+void KiddieScriptsMenu::drawIcon(float scale) {
     clearIconArea();
 
     int iconW = scale * 40;

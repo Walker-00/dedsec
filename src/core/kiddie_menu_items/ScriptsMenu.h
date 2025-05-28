@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class ScriptsMenu : public MenuItemInterface {
+class KiddieScriptsMenu : public MenuItemInterface {
 public:
-    ScriptsMenu() : MenuItemInterface("JS Interpreter") {}
+    KiddieScriptsMenu() : MenuItemInterface("JS Interpreter") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);
