@@ -10,7 +10,7 @@
 #include "modules/rf/rf_spectrum.h"
 #include "modules/rf/rf_waterfall.h"
 
-void RFMenu::optionsMenu() {
+void KiddieRFMenu::optionsMenu() {
     options = {
         {"Scan/copy",       [=]() { RFScan(); }       },
         {"Record RAW",      rf_raw_record             }, // Pablo-Ortiz-Lopez
@@ -35,7 +35,7 @@ void RFMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, txt.c_str());
 }
 
-void RFMenu::configMenu() {
+void KiddieRFMenu::configMenu() {
     options = {
         {"RF TX Pin", lambdaHelper(gsetRfTxPin, true)},
         {"RF RX Pin", lambdaHelper(gsetRfRxPin, true)},
@@ -46,12 +46,12 @@ void RFMenu::configMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "RF Config");
 }
-void RFMenu::drawIconImg() {
+void KiddieRFMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.rf), 0, imgCenterY, true
     );
 }
-void RFMenu::drawIcon(float scale) {
+void KiddieRFMenu::drawIcon(float scale) {
     clearIconArea();
     int radius = scale * 7;
     int deltaRadius = scale * 10;

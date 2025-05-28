@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class RFMenu : public MenuItemInterface {
+class KiddieRFMenu : public MenuItemInterface {
 public:
-    RFMenu() : MenuItemInterface("RF") {}
+    KiddieRFMenu() : MenuItemInterface("RF") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);
