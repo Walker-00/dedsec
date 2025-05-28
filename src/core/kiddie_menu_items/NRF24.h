@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class NRF24Menu : public MenuItemInterface {
+class KiddieNRF24Menu : public MenuItemInterface {
 public:
-    NRF24Menu() : MenuItemInterface("NRF24") {}
+    KiddieNRF24Menu() : MenuItemInterface("NRF24") {}
 
     void optionsMenu(void);
     void configMenu(void);

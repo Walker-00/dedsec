@@ -5,7 +5,7 @@
 #include "modules/NRF24/nrf_jammer.h"
 #include "modules/NRF24/nrf_spectrum.h"
 
-void NRF24Menu::optionsMenu() {
+void KiddieNRF24Menu::optionsMenu() {
     options.clear();
     options.push_back({"Information", nrf_info});
 
@@ -31,7 +31,7 @@ void NRF24Menu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, "NRF24");
 }
 
-void NRF24Menu::configMenu() {
+void KiddieNRF24Menu::configMenu() {
     uint8_t opt = 0;
     options = {
         {"NRF24 (legacy)",     [&]() { opt = 1; }      },
@@ -61,12 +61,12 @@ void NRF24Menu::configMenu() {
         );
     }
 }
-void NRF24Menu::drawIconImg() {
+void KiddieNRF24Menu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.nrf), 0, imgCenterY, true
     );
 }
-void NRF24Menu::drawIcon(float scale) {
+void KiddieNRF24Menu::drawIcon(float scale) {
     clearIconArea();
     int iconW = scale * 80;
     int iconH = scale * 60;
