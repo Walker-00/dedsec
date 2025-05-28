@@ -20,20 +20,20 @@
 
 class KiddieMenu {
 public:
-    FileMenu fileMenu;
-    BleMenu bleMenu;
-    ClockMenu clockMenu;
-    ConnectMenu connectMenu;
-    ConfigMenu configMenu;
+    KiddieFileMenu fileMenu;
+    KiddieBleMenu bleMenu;
+    KiddieClockMenu clockMenu;
+    KiddieConnectMenu connectMenu;
+    KiddieConfigMenu configMenu;
     // FMMenu fmMenu;
-    GpsMenu gpsMenu;
-    IRMenu irMenu;
-    NRF24Menu nrf24Menu;
-    OthersMenu othersMenu;
-    RFIDMenu rfidMenu;
-    RFMenu rfMenu;
-    ScriptsMenu scriptsMenu;
-    WifiMenu wifiMenu;
+    KiddieGpsMenu gpsMenu;
+    KiddieIRMenu irMenu;
+    KiddieNRF24Menu nrf24Menu;
+    KiddieOthersMenu othersMenu;
+    KiddieRFIDMenu rfidMenu;
+    KiddieRFMenu rfMenu;
+    KiddieScriptsMenu scriptsMenu;
+    KiddieWifiMenu wifiMenu;
 
     KiddieMenu();
     ~KiddieMenu();
