@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class GpsMenu : public MenuItemInterface {
+class KiddieGpsMenu : public MenuItemInterface {
 public:
-    GpsMenu() : MenuItemInterface("GPS") {}
+    KiddieGpsMenu() : MenuItemInterface("GPS") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

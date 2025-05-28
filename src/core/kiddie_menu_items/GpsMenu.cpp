@@ -6,7 +6,7 @@
 #include "modules/gps/wardriving.h"
 #include <math.h>
 
-void GpsMenu::optionsMenu() {
+void KiddieGpsMenu::optionsMenu() {
     options = {
         {"Wardriving",  [=]() { Wardriving(); }},
         {"GPS Tracker", [=]() { GPSTracker(); }},
@@ -18,7 +18,7 @@ void GpsMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, txt.c_str());
 }
 
-void GpsMenu::configMenu() {
+void KiddieGpsMenu::configMenu() {
     options = {
         {"Baudrate", setGpsBaudrateMenu      },
         {"Back",     [=]() { optionsMenu(); }},
@@ -26,12 +26,12 @@ void GpsMenu::configMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "GPS Config");
 }
-void GpsMenu::drawIconImg() {
+void KiddieGpsMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.gps), 0, imgCenterY, true
     );
 }
-void GpsMenu::drawIcon(float scale) {
+void KiddieGpsMenu::drawIcon(float scale) {
     clearIconArea();
     int radius = scale * 18;
     if (radius % 2 != 0) radius++;
