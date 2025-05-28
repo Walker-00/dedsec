@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class FileMenu : public MenuItemInterface {
+class KiddieFileMenu : public MenuItemInterface {
 public:
-    FileMenu() : MenuItemInterface("Files") {}
+    KiddieFileMenu() : MenuItemInterface("Files") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

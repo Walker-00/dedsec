@@ -5,7 +5,7 @@
 #include "core/utils.h"
 #include "core/wifi/webInterface.h"
 
-void FileMenu::optionsMenu() {
+void KiddieFileMenu::optionsMenu() {
     options.clear();
     if(sdcardMounted) options.push_back({"SD Card", [=]() { loopSD(SD); }});
     options.push_back({"LittleFS", [=]() { loopSD(LittleFS); }});
@@ -17,7 +17,7 @@ void FileMenu::optionsMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "Files");
 }
-void FileMenu::drawIconImg() {
+void KiddieFileMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.files),
@@ -26,7 +26,7 @@ void FileMenu::drawIconImg() {
         true
     );
 }
-void FileMenu::drawIcon(float scale) {
+void KiddieFileMenu::drawIcon(float scale) {
     clearIconArea();
     int iconW = scale * 32;
     int iconH = scale * 48;
