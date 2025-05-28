@@ -8,7 +8,7 @@
 #include "core/led_control.h"
 #endif
 
-void ConfigMenu::optionsMenu() {
+void KiddieConfigMenu::optionsMenu() {
     options = {
         {"Brightness", setBrightnessMenu},
         {"Dim Time", setDimmerTimeMenu},
@@ -57,7 +57,7 @@ void ConfigMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, "Config");
 }
 
-void ConfigMenu::devMenu() {
+void KiddieConfigMenu::devMenu() {
     options = {
         {"I2C Finder",  find_i2c_addresses                                   },
         {"CC1101 Pins", [=]() { setSPIPinsMenu(bruceConfigPins.CC1101_bus); }},
@@ -68,7 +68,7 @@ void ConfigMenu::devMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "Dev Mode");
 }
-void ConfigMenu::drawIconImg() {
+void KiddieConfigMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.config),
@@ -77,7 +77,7 @@ void ConfigMenu::drawIconImg() {
         true
     );
 }
-void ConfigMenu::drawIcon(float scale) {
+void KiddieConfigMenu::drawIcon(float scale) {
     clearIconArea();
     int radius = scale * 9;
 
