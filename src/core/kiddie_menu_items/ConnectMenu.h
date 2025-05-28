@@ -1,5 +1,5 @@
-#ifndef __CONNECT_MENU_H__
-#define __CONNECT_MENU_H__
+#ifndef __KIDDIE_CONNECT_MENU_H__
+#define __KIDDIE_CONNECT_MENU_H__
 
 #include <MenuItemInterface.h>
 
