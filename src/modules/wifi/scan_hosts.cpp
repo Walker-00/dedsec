@@ -517,7 +517,7 @@ void arpSpoofing(const Host &host, bool mitm) {
     if (mitm) {
         tft.setTextSize(FP);
         // padprintln("Man in The middle Activated");
-        // padprintln("/BrucePCAP/ARP_session_" + String(nf) + ".pcap");
+        // padprintln("R4d0nPCAP/ARP_session_" + String(nf) + ".pcap");
         Serial.println("Still in development");
     }
     padprintln("Tgt:" + host.mac);

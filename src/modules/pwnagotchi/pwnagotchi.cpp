@@ -116,11 +116,11 @@ void brucegotchi_start() {
     // Check where to save the Handshakes
     if (setupSdCard()) {
         isLittleFS = false;
-        if (!SD.exists("/BrucePCAP")) SD.mkdir("/BrucePCAP");
-        if (!SD.exists("/BrucePCAP/handshakes")) SD.mkdir("/BrucePCAP/handshakes");
+        if (!SD.exists("R4d0nPCAP")) SD.mkdir("R4d0nPCAP");
+        if (!SD.exists("R4d0nPCAP/handshakes")) SD.mkdir("R4d0nPCAP/handshakes");
     } else {
-        if (!LittleFS.exists("/BrucePCAP")) LittleFS.mkdir("/BrucePCAP");
-        if (!LittleFS.exists("/BrucePCAP/handshakes")) LittleFS.mkdir("/BrucePCAP/handshakes");
+        if (!LittleFS.exists("R4d0nPCAP")) LittleFS.mkdir("R4d0nPCAP");
+        if (!LittleFS.exists("R4d0nPCAP/handshakes")) LittleFS.mkdir("R4d0nPCAP/handshakes");
         isLittleFS = true;
     }
     tmp = millis();

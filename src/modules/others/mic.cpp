@@ -308,15 +308,15 @@ void mic_record() {
     char filename[32];
     int index = 0;
 
-    if (!fs->exists("/BruceMIC")) {
-        if (!fs->mkdir("/BruceMIC")) {
+    if (!fs->exists("R4d0nMIC")) {
+        if (!fs->mkdir("R4d0nMIC")) {
             displayError("Error creating directory", true);
             return;
         }
     }
 
     do {
-        snprintf(filename, sizeof(filename), "/BruceMIC/recording_%d.wav", index++);
+        snprintf(filename, sizeof(filename), "R4d0nMIC/recording_%d.wav", index++);
     } while (fs->exists(filename));
     File audioFile = fs->open(filename, FILE_WRITE, true);
     if (!audioFile) {

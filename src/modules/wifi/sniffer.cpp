@@ -56,7 +56,7 @@ uint32_t packet_counter = 0;
 File _pcap_file;
 std::set<BeaconList> registeredBeacons;
 std::set<String> SavedHS; // Saves the MAC of beacon HS detected in the session
-String filename = "/BrucePCAP/" + (String)FILENAME + ".pcap";
+String filename = "R4d0nPCAP/" + (String)FILENAME + ".pcap";
 
 //===== FUNCTIONS =====//
 
@@ -116,7 +116,7 @@ void saveHandshake(const wifi_promiscuous_pkt_t *packet, bool beacon, FS &Fs) {
     char nomFichier[50];
     sprintf(
         nomFichier,
-        "/BrucePCAP/handshakes/HS_%02X%02X%02X%02X%02X%02X.pcap",
+        "R4d0nPCAP/handshakes/HS_%02X%02X%02X%02X%02X%02X.pcap",
         apAddr[0],
         apAddr[1],
         apAddr[2],
@@ -312,13 +312,13 @@ int c = 0;
 
 void openFile(FS &Fs) {
     // searches for the next non-existent file name
-    if (!Fs.exists("/BrucePCAP")) Fs.mkdir("/BrucePCAP");
-    filename = "/BrucePCAP/" + (String)FILENAME + (String)c + ".pcap";
+    if (!Fs.exists("R4d0nPCAP")) Fs.mkdir("R4d0nPCAP");
+    filename = "R4d0nPCAP/" + (String)FILENAME + (String)c + ".pcap";
     while (Fs.open(filename)) {
-        filename = "/BrucePCAP/" + (String)FILENAME + (String)c + ".pcap";
+        filename = "R4d0nPCAP/" + (String)FILENAME + (String)c + ".pcap";
         c++;
     }
-    if (!Fs.exists("/BrucePCAP/handshakes")) Fs.mkdir("/BrucePCAP/handshakes");
+    if (!Fs.exists("R4d0nPCAP/handshakes")) Fs.mkdir("R4d0nPCAP/handshakes");
     _pcap_file = Fs.open(filename, FILE_WRITE);
     if (_pcap_file) {
         fileOpen = writeHeader(_pcap_file);

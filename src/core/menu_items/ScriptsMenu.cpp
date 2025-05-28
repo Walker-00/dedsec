@@ -7,7 +7,7 @@
 
 String getScriptsFolder(FS *&fs) {
     String folder;
-    String possibleFolders[] = {"/scripts", "/BruceScripts", "/BruceJS"};
+    String possibleFolders[] = {"/scripts", "R4d0nScripts", "R4d0nJS"};
     int listSize = sizeof(possibleFolders) / sizeof(possibleFolders[0]);
 
     for (int i = 0; i < listSize; i++) {

