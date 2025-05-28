@@ -26,7 +26,7 @@ String getKiddieScriptsFolder(FS *&fs) {
 std::vector<Option> getKiddieScriptsOptionsList() {
     std::vector<Option> opt = {};
     FS *fs;
-    String folder = getScriptsFolder(fs);
+    String folder = getKiddieScriptsFolder(fs);
     if (folder == "") return opt; // did not find
 
     File root = fs->open(folder);
@@ -51,7 +51,7 @@ std::vector<Option> getKiddieScriptsOptionsList() {
 }
 
 void KiddieScriptsMenu::optionsMenu() {
-    options = getScriptsOptionsList();
+    options = getKiddieScriptsOptionsList();
 
     options.push_back({"Load...", run_bjs_script});
     addOptionToMainMenu();
