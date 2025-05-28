@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class IRMenu : public MenuItemInterface {
+class KiddieIRMenu : public MenuItemInterface {
 public:
-    IRMenu() : MenuItemInterface("IR") {}
+    KiddieIRMenu() : MenuItemInterface("IR") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

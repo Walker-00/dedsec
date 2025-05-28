@@ -7,7 +7,7 @@
 #include "modules/ir/custom_ir.h"
 #include "modules/ir/ir_read.h"
 
-void IRMenu::optionsMenu() {
+void KiddieIRMenu::optionsMenu() {
     options = {
         {"TV-B-Gone", StartTvBGone           },
         {"Custom IR", otherIRcodes           },
@@ -23,7 +23,7 @@ void IRMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, txt.c_str());
 }
 
-void IRMenu::configMenu() {
+void KiddieIRMenu::configMenu() {
     options = {
         {"Ir TX Pin", lambdaHelper(gsetIrTxPin, true)},
         {"Ir RX Pin", lambdaHelper(gsetIrRxPin, true)},
@@ -33,12 +33,12 @@ void IRMenu::configMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "IR Config");
 }
-void IRMenu::drawIconImg() {
+void KiddieIRMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.ir), 0, imgCenterY, true
     );
 }
-void IRMenu::drawIcon(float scale) {
+void KiddieIRMenu::drawIcon(float scale) {
     clearIconArea();
     int iconSize = scale * 60;
     int radius = scale * 7;
