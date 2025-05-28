@@ -35,7 +35,7 @@ public:
         String content;
     };
 
-    const char *filepath = "/bruce.conf";
+    const char *filepath = "/radon.conf";
 
     // Settings
     int rotation = ROTATION > 1 ? 3 : 1;
@@ -53,8 +53,8 @@ public:
     int ledBlinkEnabled = 1;
 
     // Wifi
-    Credential webUI = {"admin", "bruce"};
-    WiFiCredential wifiAp = {"BruceNet", "brucenet"};
+    Credential webUI = {"admin", "r4d0n"};
+    WiFiCredential wifiAp = {"R4d0nNet", "radonnet"};
     std::map<String, String> wifi = {};
     std::set<String> evilWifiNames = {};
 
@@ -93,9 +93,9 @@ public:
     std::vector<String> disabledMenus = {};
 
     std::vector<QrCodeEntry> qrCodes = {
-        {"Bruce AP",   "WIFI:T:WPA;S:BruceNet;P:brucenet;;"},
-        {"Bruce Wiki", "https://github.com/pr3y/Bruce/wiki"},
-        {"Bruce Site", "https://bruce.computer"            },
+        {"R4d0n AP",   "WIFI:T:WPA;S:R4d0nNet;P:radonnet;;"},
+        // {"Bruce Wiki", "https://github.com/"},
+        // {"Bruce Site", "https://bruce.computer"            },
         {"Rickroll",   "https://youtu.be/dQw4w9WgXcQ"      }
     };
 

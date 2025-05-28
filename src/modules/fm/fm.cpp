@@ -13,7 +13,7 @@ void set_frq(uint16_t frq) { fm_station = frq; }
 void fm_banner() {
     tft.fillScreen(bruceConfig.bgColor);
     tft.setCursor(10, 10);
-    tft.drawCentreString("~== Bruce Radio ==~", tftWidth / 2, 10, SMOOTH_FONT);
+    tft.drawCentreString("~== R4d0n Radio ==~", tftWidth / 2, 10, SMOOTH_FONT);
     delay(500);
 }
 
@@ -268,11 +268,11 @@ bool fm_setup(bool traffic_alert, bool silent) {
     // Begin the RDS/RDBS transmission
     radio.beginRDS();
     if (traffic_alert) {
-        radio.setRDSstation("BruceTraffic");
+        radio.setRDSstation("R4d0nTraffic");
         radio.setRDSbuffer("Traffic Info");
     } else {
-        radio.setRDSstation("BruceRadio");
-        radio.setRDSbuffer("Pwned by Bruce Radio!");
+        radio.setRDSstation("R4d0nRadio");
+        radio.setRDSbuffer("Pwned by R4d0n Radio!");
     }
 
     if (!silent) {

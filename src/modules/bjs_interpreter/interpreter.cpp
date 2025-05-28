@@ -268,7 +268,7 @@ static duk_ret_t native_getBattery(duk_context *ctx) {
 }
 
 static duk_ret_t native_getDeviceName(duk_context *ctx) {
-    const char *deviceName = bruceConfig.wifiAp.ssid != NULL ? bruceConfig.wifiAp.ssid.c_str() : "Bruce";
+    const char *deviceName = bruceConfig.wifiAp.ssid != NULL ? bruceConfig.wifiAp.ssid.c_str() : "R4d0n";
     duk_push_string(ctx, deviceName);
     return 1;
 }

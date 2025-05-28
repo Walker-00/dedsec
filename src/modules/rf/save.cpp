@@ -10,14 +10,14 @@ bool rf_raw_save(RawRecording recorded) {
     char filename[32];
     int index = 0;
 
-    if (!fs->exists("/BruceRF")) {
-        if (!fs->mkdir("/BruceRF")) {
+    if (!fs->exists("/R4d0nRF")) {
+        if (!fs->mkdir("/R4d0nRF")) {
             displayError("Error creating directory", true);
             return false;
         }
     }
 
-    do { snprintf(filename, sizeof(filename), "/BruceRF/raw_%d.sub", index++); } while (fs->exists(filename));
+    do { snprintf(filename, sizeof(filename), "/R4d0nRF/raw_%d.sub", index++); } while (fs->exists(filename));
 
     File file = fs->open(filename, FILE_WRITE, true);
     if (!file) {
@@ -25,7 +25,7 @@ bool rf_raw_save(RawRecording recorded) {
         return false;
     }
 
-    file.write((const uint8_t *)"Filetype: Bruce SubGhz File\n", 28);
+    file.write((const uint8_t *)"Filetype: R4d0n SubGhz File\n", 28);
     file.write((const uint8_t *)"Version 1\n", 10);
 
     char line[64];

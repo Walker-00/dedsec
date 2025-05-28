@@ -115,7 +115,7 @@ int RFID2::load() {
     FS *fs;
 
     if (!getFsStorage(fs)) return FAILURE;
-    filepath = loopSD(*fs, true, "RFID|NFC", "/BruceRFID");
+    filepath = loopSD(*fs, true, "RFID|NFC", "/R4d0nRFID");
     file = fs->open(filepath, FILE_READ);
 
     if (!file) { return FAILURE; }
@@ -149,18 +149,18 @@ int RFID2::save(String filename) {
     FS *fs;
     if (!getFsStorage(fs)) return FAILURE;
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if ((*fs).exists("/BruceRFID/" + filename + ".rfid")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if ((*fs).exists("/R4d0nRFID/" + filename + ".rfid")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/" + filename + String(i) + ".rfid")) i++;
+        while ((*fs).exists("/R4d0nRFID/" + filename + String(i) + ".rfid")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/" + filename + ".rfid", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/" + filename + ".rfid", FILE_WRITE);
 
     if (!file) { return FAILURE; }
 
-    file.println("Filetype: Bruce RFID File");
+    file.println("Filetype: R4d0n RFID File");
     file.println("Version 1");
     file.println("Device type: " + printableUID.picc_type);
     file.println("# UID, ATQA and SAK are common for all formats");

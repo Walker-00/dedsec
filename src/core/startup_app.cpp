@@ -1,7 +1,7 @@
 /**
  * @file startup_app.cpp
  * @author Rennan Cockles (https://github.com/rennancockles)
- * @brief Bruce startup apps
+ * @brief R4d0n startup apps
  * @version 0.1
  * @date 2024-11-20
  */

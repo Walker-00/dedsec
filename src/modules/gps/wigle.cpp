@@ -44,7 +44,7 @@ bool Wigle::get_user() {
     client.print("Host: ");
     client.println(host);
     client.println("Connection: close");
-    client.println("User-Agent: bruce.wardriving");
+    client.println("User-Agent: r4d0n.wardriving");
     client.print("Authorization: ");
     client.println(auth_header);
     client.println();
@@ -90,7 +90,7 @@ void Wigle::send_upload_headers(WiFiClientSecure &client, String filename, int f
     client.print("Host: ");
     client.println(host);
     client.println("Connection: close");
-    client.println("User-Agent: bruce.wardriving");
+    client.println("User-Agent: r4d0n.wardriving");
     client.print("Authorization: ");
     client.println(auth_header);
     client.print("Content-Type: multipart/form-data; boundary=");
@@ -186,7 +186,7 @@ bool Wigle::_upload_file(File file, String upload_message) {
 
     String filename = file.name();
     int filesize = file.size();
-    String boundary = "BRUCE";
+    String boundary = "R4d0n";
     boundary.concat(esp_random());
 
     send_upload_headers(client, filename, filesize, boundary);

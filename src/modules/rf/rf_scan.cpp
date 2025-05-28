@@ -467,7 +467,7 @@ bool RCSwitch_SaveSignal(float frequency, RfCodes codes, bool raw, char *key, bo
         return false;
     }
 
-    String subfile_out = "Filetype: Bruce SubGhz File\nVersion 1\n";
+    String subfile_out = "Filetype: R4d0n SubGhz File\nVersion 1\n";
     subfile_out += "Frequency: " + String(int(frequency * 1000000)) + "\n";
     if (!raw) {
         subfile_out += "Preset: " + String(codes.preset) + "\n";
@@ -491,7 +491,7 @@ bool RCSwitch_SaveSignal(float frequency, RfCodes codes, bool raw, char *key, bo
         filename = "raw.sub";
     }
 
-    String filepath = "/BruceRF";
+    String filepath = "/R4d0nRF";
     if (autoSave) filepath += "/autoSaved";
     File file = createNewFile(fs, filepath, filename);
 
@@ -666,7 +666,7 @@ RestartRec:
                 // TODO: show a dialog/warning?
                 // raw = yesNoDialog("decoding failed, save as RAW?");
             }
-            String subfile_out = "Filetype: Bruce SubGhz File\nVersion 1\n";
+            String subfile_out = "Filetype: R4d0n SubGhz File\nVersion 1\n";
             subfile_out += "Frequency: " + String(int(frequency * 1000000)) + "\n";
             if (!raw) {
                 subfile_out += "Preset: " + String(received.preset) + "\n";

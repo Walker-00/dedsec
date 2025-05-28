@@ -492,19 +492,19 @@ void TagOMatic::save_scan_result() {
 
     String filename = "scan_result";
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if (!(*fs).exists("/BruceRFID/Scans")) (*fs).mkdir("/BruceRFID/Scans");
-    if ((*fs).exists("/BruceRFID/Scans/" + filename + ".rfidscan")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if (!(*fs).exists("/R4d0nRFID/Scans")) (*fs).mkdir("/R4d0nRFID/Scans");
+    if ((*fs).exists("/R4d0nRFID/Scans/" + filename + ".rfidscan")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/Scans/" + filename + String(i) + ".rfidscan")) i++;
+        while ((*fs).exists("/R4d0nRFID/Scans/" + filename + String(i) + ".rfidscan")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/Scans/" + filename + ".rfidscan", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/Scans/" + filename + ".rfidscan", FILE_WRITE);
 
     if (!file) { return; }
 
-    file.println("Filetype: Bruce RFID Scan Result");
+    file.println("Filetype: R4d0n RFID Scan Result");
     for (String uid : _scanned_tags) { file.println(uid); }
 
     file.close();

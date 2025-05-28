@@ -129,7 +129,7 @@ int PN532::load() {
     FS *fs;
 
     if (!getFsStorage(fs)) return FAILURE;
-    filepath = loopSD(*fs, true, "RFID|NFC", "/BruceRFID");
+    filepath = loopSD(*fs, true, "RFID|NFC", "/R4d0nRFID");
     file = fs->open(filepath, FILE_READ);
 
     if (!file) { return FAILURE; }
@@ -163,11 +163,11 @@ int PN532::save(String filename) {
     FS *fs;
     if (!getFsStorage(fs)) return FAILURE;
 
-    File file = createNewFile(fs, "/BruceRFID", filename + ".rfid");
+    File file = createNewFile(fs, "/R4d0nRFID", filename + ".rfid");
 
     if (!file) { return FAILURE; }
 
-    file.println("Filetype: Bruce RFID File");
+    file.println("Filetype: R4d0n RFID File");
     file.println("Version 1");
     file.println("Device type: " + printableUID.picc_type);
     file.println("# UID, ATQA and SAK are common for all formats");

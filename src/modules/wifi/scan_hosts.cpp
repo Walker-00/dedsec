@@ -483,9 +483,9 @@ bool arpPCAPfile(File &pcapFile) {
     FS *fs;
     if (setupSdCard()) fs = &SD;
     else { fs = &LittleFS; }
-    if (!fs->exists("/BrucePCAP")) fs->mkdir("/BrucePCAP");
-    while (fs->exists(String("/BrucePCAP/ARP_session_" + String(nf++) + ".pcap").c_str())) yield();
-    pcapFile = fs->open(String("/BrucePCAP/ARP_session_" + String(nf) + ".pcap").c_str(), FILE_WRITE);
+    if (!fs->exists("/R4d0nPCAP")) fs->mkdir("/R4d0nPCAP");
+    while (fs->exists(String("/R4d0nPCAP/ARP_session_" + String(nf++) + ".pcap").c_str())) yield();
+    pcapFile = fs->open(String("/R4d0nPCAP/ARP_session_" + String(nf) + ".pcap").c_str(), FILE_WRITE);
     if (pcapFile) return true;
     else return false;
 }

@@ -197,11 +197,11 @@ void Wardriving::append_to_file(int network_amount) {
 
     if (filename == "") create_filename();
 
-    if (!(*fs).exists("/BruceWardriving")) (*fs).mkdir("/BruceWardriving");
+    if (!(*fs).exists("/R4d0nWardriving")) (*fs).mkdir("/R4d0nWardriving");
 
     bool is_new_file = false;
-    if (!(*fs).exists("/BruceWardriving/" + filename)) is_new_file = true;
-    File file = (*fs).open("/BruceWardriving/" + filename, is_new_file ? FILE_WRITE : FILE_APPEND);
+    if (!(*fs).exists("/R4d0nWardriving/" + filename)) is_new_file = true;
+    File file = (*fs).open("/R4d0nWardriving/" + filename, is_new_file ? FILE_WRITE : FILE_APPEND);
 
     if (!file) {
         padprintln("Failed to open file for writing");
@@ -213,7 +213,7 @@ void Wardriving::append_to_file(int network_amount) {
         file.println(
             "WigleWifi-1.6,appRelease=v" + String(BRUCE_VERSION) + ",model=M5Stack GPS Unit,release=v" +
             String(BRUCE_VERSION) +
-            ",device=ESP32 M5Stack,display=SPI TFT,board=ESP32 M5Stack,brand=Bruce,star=Sol,body=4,subBody=1"
+            ",device=ESP32 M5Stack,display=SPI TFT,board=ESP32 M5Stack,brand=R4d0n,star=Sol,body=4,subBody=1"
         );
         file.println(
             "MAC,SSID,AuthMode,FirstSeen,Channel,Frequency,RSSI,CurrentLatitude,CurrentLongitude,"

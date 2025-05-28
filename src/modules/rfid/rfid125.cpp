@@ -231,14 +231,14 @@ bool RFID125::write_file(String filename) {
     FS *fs;
     if (!getFsStorage(fs)) return false;
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if ((*fs).exists("/BruceRFID/" + filename + ".rfidlf")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if ((*fs).exists("/R4d0nRFID/" + filename + ".rfidlf")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/" + filename + String(i) + ".rfidlf")) i++;
+        while ((*fs).exists("/R4d0nRFID/" + filename + String(i) + ".rfidlf")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/" + filename + ".rfidlf", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/" + filename + ".rfidlf", FILE_WRITE);
 
     if (!file) { return false; }
 
@@ -250,7 +250,7 @@ bool RFID125::write_file(String filename) {
     file_data.trim();
     file_data.toUpperCase();
 
-    file.println("Filetype: Bruce RFID 125kHz File");
+    file.println("Filetype: R4d0n RFID 125kHz File");
     file.println("Version 1");
     file.println("DATA: " + file_data);
     file.println("ASCII: " + _printable_data);

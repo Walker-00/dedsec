@@ -153,7 +153,7 @@ void GPSTracker::add_initial_file_data(File file) {
     file.println("<?xml-stylesheet type=\"text/xsl\" href=\"details.xsl\"?>");
     file.println("<gpx");
     file.println("  version=\"1.1\"");
-    file.println("  creator=\"Bruce Firmware\"");
+    file.println("  creator=\"R4d0n Firmware\"");
     file.println("  xmlns=\"http://www.topografix.com/GPX/1/1\"");
     file.println("  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"");
     file.println(
@@ -161,24 +161,24 @@ void GPSTracker::add_initial_file_data(File file) {
     );
     file.println(">");
     file.println("  <metadata>");
-    file.println("    <name>Bruce GPS Tracker</name>");
-    file.println("    <desc>GPS Tracker using Bruce Firmware</desc>");
-    file.println("    <link href=\"https://bruce.computer\">");
-    file.println("      <text>Bruce Website</text>");
-    file.println("    </link>");
+    file.println("    <name>R4d0n GPS Tracker</name>");
+    file.println("    <desc>GPS Tracker using R4d0n Firmware</desc>");
+    // file.println("    <link href=\"https://bruce.computer\">");
+    // file.println("      <text>R4d0n Website</text>");
+    // file.println("    </link>");
     file.println("  </metadata>");
     file.println("  <trk>");
-    file.println("    <name>Bruce Route</name>");
-    file.println("    <desc>GPS route captured by Bruce firmware</desc>");
+    file.println("    <name>R4d0n Route</name>");
+    file.println("    <desc>GPS route captured by R4d0n firmware</desc>");
     file.println("    <trkseg>");
 }
 
 void GPSTracker::add_final_file_data() {
     FS *fs;
     if (!getFsStorage(fs)) return;
-    if (filename == "" || !(*fs).exists("/BruceGPS/" + filename)) return;
+    if (filename == "" || !(*fs).exists("/R4d0nGPS/" + filename)) return;
 
-    File file = (*fs).open("/BruceGPS/" + filename, FILE_APPEND);
+    File file = (*fs).open("/R4d0nGPS/" + filename, FILE_APPEND);
 
     if (!file) return;
     file.println("    </trkseg>");
@@ -198,11 +198,11 @@ void GPSTracker::add_coord() {
 
     if (filename == "") create_filename();
 
-    if (!(*fs).exists("/BruceGPS")) (*fs).mkdir("/BruceGPS");
+    if (!(*fs).exists("/R4d0nGPS")) (*fs).mkdir("/R4d0nGPS");
 
     bool is_new_file = false;
-    if (!(*fs).exists("/BruceGPS/" + filename)) is_new_file = true;
-    File file = (*fs).open("/BruceGPS/" + filename, is_new_file ? FILE_WRITE : FILE_APPEND);
+    if (!(*fs).exists("/R4d0nGPS/" + filename)) is_new_file = true;
+    File file = (*fs).open("/R4d0nGPS/" + filename, is_new_file ? FILE_WRITE : FILE_APPEND);
 
     if (!file) {
         padprintln("Failed to open file for writing");

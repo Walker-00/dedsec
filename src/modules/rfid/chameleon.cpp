@@ -430,8 +430,8 @@ bool Chameleon::readFileLF() {
     FS *fs;
 
     if (!getFsStorage(fs)) return false;
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    filepath = loopSD(*fs, true, "RFIDLF", "/BruceRFID");
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    filepath = loopSD(*fs, true, "RFIDLF", "/R4d0nRFID");
     file = fs->open(filepath, FILE_READ);
 
     if (!file) { return false; }
@@ -457,18 +457,18 @@ bool Chameleon::writeFileLF(String filename) {
     FS *fs;
     if (!getFsStorage(fs)) return false;
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if ((*fs).exists("/BruceRFID/" + filename + ".rfidlf")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if ((*fs).exists("/R4d0nRFID/" + filename + ".rfidlf")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/" + filename + String(i) + ".rfidlf")) i++;
+        while ((*fs).exists("/R4d0nRFID/" + filename + String(i) + ".rfidlf")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/" + filename + ".rfidlf", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/" + filename + ".rfidlf", FILE_WRITE);
 
     if (!file) { return false; }
 
-    file.println("Filetype: Bruce RFID 125kHz File");
+    file.println("Filetype: R4d0n RFID 125kHz File");
     file.println("Version 1");
     file.println("UID: " + printableLFUID);
 
@@ -702,8 +702,8 @@ bool Chameleon::readFileHF() {
     FS *fs;
 
     if (!getFsStorage(fs)) return false;
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    filepath = loopSD(*fs, true, "RFID|NFC", "/BruceRFID");
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    filepath = loopSD(*fs, true, "RFID|NFC", "/R4d0nRFID");
     file = fs->open(filepath, FILE_READ);
 
     if (!file) { return false; }
@@ -737,18 +737,18 @@ bool Chameleon::writeFileHF(String filename) {
     FS *fs;
     if (!getFsStorage(fs)) return false;
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if ((*fs).exists("/BruceRFID/" + filename + ".rfid")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if ((*fs).exists("/R4d0nRFID/" + filename + ".rfid")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/" + filename + String(i) + ".rfid")) i++;
+        while ((*fs).exists("/R4d0nRFID/" + filename + String(i) + ".rfid")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/" + filename + ".rfid", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/" + filename + ".rfid", FILE_WRITE);
 
     if (!file) { return false; }
 
-    file.println("Filetype: Bruce RFID File");
+    file.println("Filetype: R4d0n RFID File");
     file.println("Version 1");
     file.println("Device type: " + printableHFUID.piccType);
     file.println("# UID, ATQA and SAK are common for all formats");
@@ -969,19 +969,19 @@ void Chameleon::saveScanResult() {
 
     String filename = "scan_result";
 
-    if (!(*fs).exists("/BruceRFID")) (*fs).mkdir("/BruceRFID");
-    if (!(*fs).exists("/BruceRFID/Scans")) (*fs).mkdir("/BruceRFID/Scans");
-    if ((*fs).exists("/BruceRFID/Scans/" + filename + ".rfidscan")) {
+    if (!(*fs).exists("/R4d0nRFID")) (*fs).mkdir("/R4d0nRFID");
+    if (!(*fs).exists("/R4d0nRFID/Scans")) (*fs).mkdir("/R4d0nRFID/Scans");
+    if ((*fs).exists("/R4d0nRFID/Scans/" + filename + ".rfidscan")) {
         int i = 1;
         filename += "_";
-        while ((*fs).exists("/BruceRFID/Scans/" + filename + String(i) + ".rfidscan")) i++;
+        while ((*fs).exists("/R4d0nRFID/Scans/" + filename + String(i) + ".rfidscan")) i++;
         filename += String(i);
     }
-    File file = (*fs).open("/BruceRFID/Scans/" + filename + ".rfidscan", FILE_WRITE);
+    File file = (*fs).open("/R4d0nRFID/Scans/" + filename + ".rfidscan", FILE_WRITE);
 
     if (!file) { return; }
 
-    file.println("Filetype: Bruce RFID Scan Result");
+    file.println("Filetype: R4d0n RFID Scan Result");
     for (ScanResult scanResult : _scanned_tags) { file.println(scanResult.tagType + " | " + scanResult.uid); }
 
     file.close();
