@@ -30,7 +30,7 @@
 // 64bit: https://github.com/9dl/Bruce-C2/releases/download/v1.0/BruceC2_windows_amd64.exe
 #include "modules/wifi/tcp_utils.h"
 
-void WifiMenu::optionsMenu() {
+void KiddieWifiMenu::optionsMenu() {
     if (!wifiConnected) {
         options = {
             {"Connect Wifi", lambdaHelper(wifiConnectMenu, WIFI_STA)},
@@ -72,7 +72,7 @@ void WifiMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, "WiFi");
 }
 
-void WifiMenu::configMenu() {
+void KiddieWifiMenu::configMenu() {
     options = {
         {"Add Evil Wifi",    addEvilWifiMenu         },
         {"Remove Evil Wifi", removeEvilWifiMenu      },
@@ -81,12 +81,12 @@ void WifiMenu::configMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "WiFi Config");
 }
-void WifiMenu::drawIconImg() {
+void KiddieWifiMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.wifi), 0, imgCenterY, true
     );
 }
-void WifiMenu::drawIcon(float scale) {
+void KiddieWifiMenu::drawIcon(float scale) {
     clearIconArea();
     int deltaY = scale * 20;
     int radius = scale * 6;

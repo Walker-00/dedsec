@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class WifiMenu : public MenuItemInterface {
+class KiddieWifiMenu : public MenuItemInterface {
 public:
-    WifiMenu() : MenuItemInterface("WiFi") {}
+    KiddieWifiMenu() : MenuItemInterface("WiFi") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);
