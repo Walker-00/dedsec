@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class RFIDMenu : public MenuItemInterface {
+class KiddieRFIDMenu : public MenuItemInterface {
 public:
-    RFIDMenu() : MenuItemInterface("RFID") {}
+    KiddieRFIDMenu() : MenuItemInterface("RFID") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

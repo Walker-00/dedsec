@@ -9,7 +9,7 @@
 #include "modules/rfid/rfid125.h"
 #include "modules/rfid/tag_o_matic.h"
 
-void RFIDMenu::optionsMenu() {
+void KiddieRFIDMenu::optionsMenu() {
     options = {
         {"Read tag",    [=]() { TagOMatic(); }                          },
         {"Read 125kHz", [=]() { RFID125(); }                            },
@@ -35,7 +35,7 @@ void RFIDMenu::optionsMenu() {
     loopOptions(options, MENU_TYPE_SUBMENU, txt.c_str());
 }
 
-void RFIDMenu::configMenu() {
+void KiddieRFIDMenu::configMenu() {
     options = {
         {"RFID Module", setRFIDModuleMenu       },
         {"Add MIF Key", addMifareKeyMenu        },
@@ -44,12 +44,12 @@ void RFIDMenu::configMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "RFID Config");
 }
-void RFIDMenu::drawIconImg() {
+void KiddieRFIDMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.rfid), 0, imgCenterY, true
     );
 }
-void RFIDMenu::drawIcon(float scale) {
+void KiddieRFIDMenu::drawIcon(float scale) {
     clearIconArea();
     int iconSize = scale * 70;
     int iconRadius = scale * 7;
