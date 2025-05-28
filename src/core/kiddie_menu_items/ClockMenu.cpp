@@ -2,8 +2,8 @@
 #include "core/display.h"
 #include "core/settings.h"
 
-void ClockMenu::optionsMenu() { runClockLoop(); }
-void ClockMenu::drawIconImg() {
+void KiddieClockMenu::optionsMenu() { runClockLoop(); }
+void KiddieClockMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.clock),
@@ -12,7 +12,7 @@ void ClockMenu::drawIconImg() {
         true
     );
 }
-void ClockMenu::drawIcon(float scale) {
+void KiddieClockMenu::drawIcon(float scale) {
     clearIconArea();
     int radius = scale * 30;
     int pointerSize = scale * 15;

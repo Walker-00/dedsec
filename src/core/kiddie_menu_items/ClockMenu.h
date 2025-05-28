@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class ClockMenu : public MenuItemInterface {
+class KiddieClockMenu : public MenuItemInterface {
 public:
-    ClockMenu() : MenuItemInterface("Clock") {}
+    KiddieClockMenu() : MenuItemInterface("Clock") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);
