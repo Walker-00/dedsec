@@ -1,5 +1,5 @@
-#ifndef __RFID_MENU_H__
-#define __RFID_MENU_H__
+#ifndef __KIDDIE_RFID_MENU_H__
+#define __KIDDIE_RFID_MENU_H__
 
 #include <MenuItemInterface.h>
 
