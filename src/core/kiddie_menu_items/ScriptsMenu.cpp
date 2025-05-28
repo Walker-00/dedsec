@@ -5,7 +5,7 @@
 #include "core/utils.h"
 #include "modules/bjs_interpreter/interpreter.h" // for JavaScript interpreter
 
-String getScriptsFolder(FS *&fs) {
+String getKiddieScriptsFolder(FS *&fs) {
     String folder;
     String possibleFolders[] = {"/scripts", "R4d0nScripts", "R4d0nJS"};
     int listSize = sizeof(possibleFolders) / sizeof(possibleFolders[0]);
@@ -23,7 +23,7 @@ String getScriptsFolder(FS *&fs) {
     return "";
 }
 
-std::vector<Option> getScriptsOptionsList() {
+std::vector<Option> getKiddieScriptsOptionsList() {
     std::vector<Option> opt = {};
     FS *fs;
     String folder = getScriptsFolder(fs);
