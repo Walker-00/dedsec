@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class BleMenu : public MenuItemInterface {
+class KiddieBleMenu : public MenuItemInterface {
 public:
-    BleMenu() : MenuItemInterface("BLE") {}
+    KiddieBleMenu() : MenuItemInterface("BLE") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

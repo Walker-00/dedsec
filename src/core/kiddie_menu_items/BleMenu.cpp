@@ -7,7 +7,7 @@
 #include "modules/ble/ble_ninebot.h"
 #include <globals.h>
 
-void BleMenu::optionsMenu() {
+void KiddieBleMenu::optionsMenu() {
     options.clear();
     if (BLEConnected) {
         options.push_back({"Disconnect", [=]() {
@@ -38,13 +38,13 @@ void BleMenu::optionsMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, "Bluetooth");
 }
-void BleMenu::drawIconImg() {
+void KiddieBleMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(), bruceConfig.getThemeItemImg(bruceConfig.theme.paths.ble), 0, imgCenterY, true
     );
 }
 
-void BleMenu::drawIcon(float scale) {
+void KiddieBleMenu::drawIcon(float scale) {
     clearIconArea();
 
     int lineWidth = scale * 5;
