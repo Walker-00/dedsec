@@ -7,7 +7,7 @@
 #include "core/utils.h"
 #include "core/wifi/wifi_common.h"
 
-void ConnectMenu::optionsMenu() {
+void KiddieConnectMenu::optionsMenu() {
     options = {
         {"Send File", [=]() { FileSharing().sendFile(); }        },
         {"Recv File", [=]() { FileSharing().receiveFile(); }     },
@@ -18,7 +18,7 @@ void ConnectMenu::optionsMenu() {
 
     loopOptions(options, MENU_TYPE_SUBMENU, getName().c_str());
 }
-void ConnectMenu::drawIconImg() {
+void KiddieConnectMenu::drawIconImg() {
     drawImg(
         *bruceConfig.themeFS(),
         bruceConfig.getThemeItemImg(bruceConfig.theme.paths.connect),
@@ -27,7 +27,7 @@ void ConnectMenu::drawIconImg() {
         true
     );
 }
-void ConnectMenu::drawIcon(float scale) {
+void KiddieConnectMenu::drawIcon(float scale) {
     clearIconArea();
 
     int iconW = scale * 50;

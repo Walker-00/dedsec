@@ -3,9 +3,9 @@
 
 #include <MenuItemInterface.h>
 
-class ConnectMenu : public MenuItemInterface {
+class KiddieConnectMenu : public MenuItemInterface {
 public:
-    ConnectMenu() : MenuItemInterface("Connect") {}
+    KiddieConnectMenu() : MenuItemInterface("Connect") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);
