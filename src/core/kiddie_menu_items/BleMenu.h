@@ -1,5 +1,5 @@
-#ifndef __BLE_MENU_H__
-#define __BLE_MENU_H__
+#ifndef __KIDDIE_BLE_MENU_H__
+#define __KIDDIE_BLE_MENU_H__
 
 #include <MenuItemInterface.h>
 
