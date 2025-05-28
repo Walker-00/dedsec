@@ -1,5 +1,5 @@
-#ifndef __CONFIG_MENU_H__
-#define __CONFIG_MENU_H__
+#ifndef __KIDDIE_CONFIG_MENU_H__
+#define __KIDDIE_CONFIG_MENU_H__
 
 #include <MenuItemInterface.h>
 
