@@ -1,5 +1,5 @@
-#ifndef __WIFI_MENU_H__
-#define __WIFI_MENU_H__
+#ifndef __KIDDIE_WIFI_MENU_H__
+#define __KIDDIE_WIFI_MENU_H__
 
 #include <MenuItemInterface.h>
 
