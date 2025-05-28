@@ -3,14 +3,14 @@
 #include "core/settings.h"
 #include "core/utils.h"
 #include "core/wifi/webInterface.h"
-#include "core/wifi/wg.h"
+// #include "core/wifi/wg.h"
 #include "core/wifi/wifi_common.h"
 #include "modules/wifi/ap_info.h"
 #include "modules/wifi/clients.h"
-#include "modules/wifi/dpwo.h"
+// #include "modules/wifi/dpwo.h"
 #include "modules/wifi/evil_portal.h"
 #include "modules/wifi/scan_hosts.h"
-#include "modules/wifi/sniffer.h"
+// #include "modules/wifi/sniffer.h"
 #include "modules/wifi/wifi_atks.h"
 
 #ifndef LITE_VERSION
@@ -28,7 +28,7 @@
 
 // 32bit: https://github.com/9dl/Bruce-C2/releases/download/v1.0/BruceC2_windows_386.exe
 // 64bit: https://github.com/9dl/Bruce-C2/releases/download/v1.0/BruceC2_windows_amd64.exe
-#include "modules/wifi/tcp_utils.h"
+// #include "modules/wifi/tcp_utils.h"
 
 void WifiMenu::optionsMenu() {
     if (!wifiConnected) {
@@ -55,15 +55,15 @@ void WifiMenu::optionsMenu() {
                            EvilPortal();
                        }});
     // options.push_back({"ReverseShell", [=]()       { ReverseShell(); }});
-    options.push_back({"Listen TCP", listenTcpPort});
-    options.push_back({"Client TCP", clientTCP});
+    // options.push_back({"Listen TCP", listenTcpPort});
+    // options.push_back({"Client TCP", clientTCP});
 #ifndef LITE_VERSION
-    options.push_back({"TelNET", telnet_setup});
-    options.push_back({"SSH", lambdaHelper(ssh_setup, String(""))});
-    options.push_back({"DPWO", dpwo_setup});
-    options.push_back({"Raw Sniffer", sniffer_setup});
+    // options.push_back({"TelNET", telnet_setup});
+    // options.push_back({"SSH", lambdaHelper(ssh_setup, String(""))});
+    // options.push_back({"DPWO", dpwo_setup});
+    // options.push_back({"Raw Sniffer", sniffer_setup});
     options.push_back({"Scan Hosts", local_scan_setup});
-    options.push_back({"Wireguard", wg_setup});
+    // options.push_back({"Wireguard", wg_setup});
     options.push_back({"Brucegotchi", brucegotchi_start});
 #endif
     options.push_back({"Config", [=]() { configMenu(); }});

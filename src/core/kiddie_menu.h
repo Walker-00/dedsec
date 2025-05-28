@@ -3,20 +3,20 @@
 
 #include <MenuItemInterface.h>
 
-// #include "menu_items/BleMenu.h"
-// #include "menu_items/ClockMenu.h"
-// #include "menu_items/ConfigMenu.h"
-// #include "menu_items/ConnectMenu.h"
-// // #include "menu_items/FMMenu.h"
-// #include "menu_items/FileMenu.h"
-// #include "menu_items/GpsMenu.h"
-// #include "menu_items/IRMenu.h"
-// #include "menu_items/NRF24.h"
-// #include "menu_items/OthersMenu.h"
-// #include "menu_items/RFIDMenu.h"
-// #include "menu_items/RFMenu.h"
-// #include "menu_items/ScriptsMenu.h"
-#include "kiddie_menu.h"
+#include "kiddie_menu_items/BleMenu.h"
+#include "kiddie_menu_items/ClockMenu.h"
+#include "kiddie_menu_items/ConfigMenu.h"
+#include "kiddie_menu_items/ConnectMenu.h"
+// #include "menu_items/FMMenu.h"
+#include "kiddie_menu_items/FileMenu.h"
+#include "kiddie_menu_items/GpsMenu.h"
+#include "kiddie_menu_items/IRMenu.h"
+#include "kiddie_menu_items/NRF24.h"
+#include "kiddie_menu_items/OthersMenu.h"
+#include "kiddie_menu_items/RFIDMenu.h"
+#include "kiddie_menu_items/RFMenu.h"
+#include "kiddie_menu_items/ScriptsMenu.h"
+#include "kiddie_menu_items/WifiMenu.h"
 
 class KiddieMenu {
 public:

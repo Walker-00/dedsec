@@ -1,4 +1,4 @@
-#include "main_menu.h"
+#include "kiddie_menu.h"
 #include "display.h"
 #include <globals.h>
 
