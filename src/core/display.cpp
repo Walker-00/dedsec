@@ -720,36 +720,39 @@ void drawStatusBar() {
     if (bat > 0) {
         drawBatteryStatus(bat);
     } else bat_margin = 20;
-    if (sdcardMounted) {
-        tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
-        tft.setTextSize(FP);
-        tft.drawString("SD", tftWidth - (bat_margin + 20 * i), 12);
-        i++;
-    } // Indication for SD card on screen
-    if (gpsConnected) {
-        drawGpsSmall(tftWidth - (bat_margin + 20 * i), 7);
-        i++;
-    }
-    if (wifiConnected) {
-        drawWifiSmall(tftWidth - (bat_margin + 20 * i), 7);
-        i++;
-    } // Draw Wifi Symbol beside battery
-    if (isWebUIActive) {
-        drawWebUISmall(tftWidth - (bat_margin + 20 * i), 7);
-        i++;
-    } // Draw Wifi Symbol beside battery
-    if (BLEConnected) {
-        drawBLESmall(tftWidth - (bat_margin + 20 * i), 7);
-        i++;
-    } // Draw BLE beside Wifi
-    if (isConnectedWireguard) {
-        drawWireguardStatus(tftWidth - (bat_margin + 21 * i), 7);
-        i++;
-    } // Draw Wg bedide BLE, if the others exist, if not, beside battery
+    // if (sdcardMounted) {
+    //     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
+    //     tft.setTextSize(FP);
+    //     tft.drawString("SD", tftWidth - (bat_margin + 20 * i), 12);
+    //     i++;
+    // } // Indication for SD card on screen
+    // if (gpsConnected) {
+    //     drawGpsSmall(tftWidth - (bat_margin + 20 * i), 7);
+    //     i++;
+    // }
+    // if (wifiConnected) {
+    //     drawWifiSmall(tftWidth - (bat_margin + 20 * i), 7);
+    //     i++;
+    // } // Draw Wifi Symbol beside battery
+    // if (isWebUIActive) {
+    //     drawWebUISmall(tftWidth - (bat_margin + 20 * i), 7);
+    //     i++;
+    // } // Draw Wifi Symbol beside battery
+    // if (BLEConnected) {
+    //     drawBLESmall(tftWidth - (bat_margin + 20 * i), 7);
+    //     i++;
+    // } // Draw BLE beside Wifi
+    // if (isConnectedWireguard) {
+    //     drawWireguardStatus(tftWidth - (bat_margin + 21 * i), 7);
+    //     i++;
+    // } // Draw Wg bedide BLE, if the others exist, if not, beside battery
 
     if (bruceConfig.theme.border) {
-        tft.drawRoundRect(5, 5, tftWidth - 10, tftHeight - 10, 5, bruceConfig.priColor);
-        tft.drawLine(5, 25, tftWidth - 6, 25, bruceConfig.priColor);
+        // tft.drawRoundRect(5, 5, tftWidth - 10, tftHeight - 10, 5, bruceConfig.priColor);
+        // tft.drawLine(5, 25, tftWidth - 6, 25, bruceConfig.priColor);
+        // status_border
+        tft.drawRect(15, 0, 98, 10, 0xFFFF);
+
     }
 
     if (clock_set) {
@@ -843,6 +846,8 @@ int getBattery() {
 ** Function name: drawBatteryStatus()
 ** Description:   Delivers the battery value from 1-100
 ***************************************************************************************/
+static const unsigned char PROGMEM image_battery_icon_bits[] = {0xff,0xf0,0xff,0x98,0xff,0x98,0xff,0x98,0xff,0xf0};
+
 void drawBatteryStatus(uint8_t bat) {
     if (bat == 0) return;
 
@@ -854,14 +859,16 @@ void drawBatteryStatus(uint8_t bat) {
     else if (bat < 34) barcolor = color = TFT_YELLOW;
     if (charging) color = TFT_GREEN;
 
-    tft.drawRoundRect(tftWidth - 43, 6, 36, 19, 2, charging ? color : bruceConfig.bgColor); // (bolder border)
-    tft.drawRoundRect(tftWidth - 42, 7, 34, 17, 2, color);
-    tft.setTextSize(FP);
-    tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
-    tft.drawRightString((bat == 100 ? "" : " ") + String(bat) + "%", tftWidth - 45, 12, 1);
-    tft.fillRoundRect(tftWidth - 40, 9, 30 * bat / 100, 13, 2, barcolor);
-    tft.drawLine(tftWidth - 30, 9, tftWidth - 30, 9 + 13, bruceConfig.bgColor);
-    tft.drawLine(tftWidth - 20, 9, tftWidth - 20, 9 + 13, bruceConfig.bgColor);
+    // tft.drawRoundRect(tftWidth - 43, 6, 36, 19, 2, charging ? color : bruceConfig.bgColor); // (bolder border)
+    // tft.drawRoundRect(tftWidth - 42, 7, 34, 17, 2, color);
+    // tft.setTextSize(FP);
+    // tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
+    // tft.drawRightString((bat == 100 ? "" : " ") + String(bat) + "%", tftWidth - 45, 12, 1);
+    // tft.fillRoundRect(tftWidth - 40, 9, 30 * bat / 100, 13, 2, barcolor);
+    // tft.drawLine(tftWidth - 30, 9, tftWidth - 30, 9 + 13, bruceConfig.bgColor);
+    // tft.drawLine(tftWidth - 20, 9, tftWidth - 20, 9 + 13, bruceConfig.bgColor);
+    // battery_icon
+    tft.drawBitmap(96, 2, image_battery_icon_bits, 13, 5, barcolor);
 }
 /***************************************************************************************
 ** Function name: drawWireguardStatus()
