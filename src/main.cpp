@@ -271,7 +271,7 @@ void boot_screen_anim() {
             }
             drawn = true;
         }
-// #if !defined(LITE_VERSION)
+#if !defined(LITE_VERSION)
 //         if (!boot_img && (millis() - i > 2200) && (millis() - i) < 2700)
 //             tft.drawRect(2 * tftWidth / 3, tftHeight / 2, 2, 2, bruceConfig.priColor);
 //         if (!boot_img && (millis() - i > 2700) && (millis() - i) < 2900)
@@ -315,7 +315,7 @@ void boot_screen_anim() {
             // Layer 5
             tft.drawString("Oniii Chan", 7, 40);
 
-// #endif
+#endif
         if (check(AnyKeyPress)) // If any key or M5 key is pressed, it'll jump the boot screen
         {
             tft.fillScreen(bruceConfig.bgColor);
