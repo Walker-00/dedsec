@@ -287,16 +287,34 @@ void boot_screen_anim() {
 //                 bruceConfig.priColor
 //             );
 //         if (!boot_img && (millis() - i > 3400) && (millis() - i) < 3600) tft.fillScreen(bruceConfig.bgColor);
-//         if (!boot_img && (millis() - i > 3600))
-//             tft.drawXBitmap(
-//                 (tftWidth - 238) / 2,
-//                 (tftHeight - 133) / 2,
-//                 bits,
-//                 bits_width,
-//                 bits_height,
-//                 bruceConfig.bgColor,
-//                 bruceConfig.priColor
-//             );
+        if (!boot_img && (millis() - i > 3600))
+            // tft.drawXBitmap(
+            //     (tftWidth - 238) / 2,
+            //     (tftHeight - 133) / 2,
+            //     bits,
+            //     bits_width,
+            //     bits_height,
+            //     bruceConfig.bgColor,
+            //     bruceConfig.priColor
+            // );
+
+            // R4d0n_dead
+            tft.drawBitmap(71, -1, image_R4d0n_dead_bits, 64, 64, 0xFFFF);
+
+            // Layer 2
+            tft.setTextSize(1);
+            // tft.setFreeFont();
+            tft.drawString("UwU", 26, 14);
+
+            // Layer 3
+            tft.drawString("R4d0n, in your area", 1, 54);
+
+            // Layer 4
+            tft.drawString("Arr Borr", 14, 28);
+
+            // Layer 5
+            tft.drawString("Oniii Chan", 7, 40);
+
 // #endif
         if (check(AnyKeyPress)) // If any key or M5 key is pressed, it'll jump the boot screen
         {
