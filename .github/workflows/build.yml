@@ -99,32 +99,32 @@ jobs:
           for file in $(find .pio/build/**/ -name 'release.bin'); do
             version=$(echo ${{ github.run_number }})
             env=$(basename $(dirname "$file"))
-            new_name="Bruce_${env}_v0.0.$version.bin"
+            new_name="R4d0n_${env}_v0.0.$version.bin"
             mv "$file" "$(dirname "$file")/$new_name"
           done
-          chmod +r .pio/build/**/Bruce*.bin
-          ls .pio/build/**/Bruce*.bin
+          chmod +r .pio/build/**/R4d0n*.bin
+          ls .pio/build/**/R4d0n*.bin
         if: github.event_name != 'pull_request'
 
       - name: Upload Binaries
         id: upload_binaries_Cplus
         uses: actions/upload-artifact@v4
         with:
-          path: .pio/build/m5stack-cplus1_1/Bruce*.bin
+          path: .pio/build/m5stack-cplus1_1/R4d0n*.bin
         if: github.event_name != 'pull_request'
 
       - name: Upload Binaries
         id: upload_binaries_Cplus2
         uses: actions/upload-artifact@v4
         with:
-          path: .pio/build/m5stack-cplus2/Bruce*.bin
+          path: .pio/build/m5stack-cplus2/R4d0n*.bin
         if: github.event_name != 'pull_request'
 
       - name: Upload Binaries_Card
         id: upload_binaries
         uses: actions/upload-artifact@v4
         with:
-          path: .pio/build/m5stack-cardputer/Bruce*.bin
+          path: .pio/build/m5stack-cardputer/R4d0n*.bin
         if: github.event_name != 'pull_request'
 
       #- name: Create Release
